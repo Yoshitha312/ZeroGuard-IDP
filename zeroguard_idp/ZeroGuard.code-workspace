@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../zeroguard_client"
+		}
+	],
+	"settings": {}
+}

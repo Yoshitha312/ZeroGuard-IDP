@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Error — ZeroGuard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--surface:#111118;--border:#2a2a3a;--accent:#00ff88;--danger:#ff4444;--text:#e8e8f0;--text-dim:#888899;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;}
+    .box{max-width:480px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--danger);padding:2rem;}
+    h1{font-family:'Syne',sans-serif;color:var(--danger);font-size:1.3rem;margin-bottom:.5rem;}
+    p{color:var(--text-dim);font-size:.8rem;line-height:1.7;margin-bottom:1.5rem;}
+    a{color:var(--accent);text-decoration:none;font-size:.8rem;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>⚠️ {{ error }}</h1>
+    <p>{{ description }}</p>
+    <a href="/login">← Try logging in again</a>
+  </div>
+</body>
+</html>

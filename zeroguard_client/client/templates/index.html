@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZeroGuard — Zero Trust IAM Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#00ff88;--accent2:#7c3aed;--text:#e8e8f0;--text-dim:#888899;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-height:100vh;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,136,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(10,10,15,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .logo{font-family:'Space Mono',monospace;font-size:1.1rem;color:var(--accent);text-decoration:none;}
+    .logo span{color:var(--text-dim);}
+    .nav-btn{padding:.5rem 1.2rem;background:var(--accent);color:#000;font-family:'Space Mono',monospace;font-size:.8rem;font-weight:700;text-decoration:none;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px));}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;z-index:1;}
+    .tag{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:1.5rem;}
+    h1 .accent{color:var(--accent);}
+    .desc{font-size:1rem;color:var(--text-dim);line-height:1.7;margin-bottom:2.5rem;font-family:'Space Mono',monospace;max-width:600px;margin-left:auto;margin-right:auto;}
+    .cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{padding:.7rem 1.6rem;background:var(--accent);color:#000;font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;padding:4rem 2rem;max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+    .feat{background:var(--surface);border:1px solid var(--border);padding:1.5rem;transition:border-color .3s;}
+    .feat:hover{border-color:var(--accent);}
+    .feat-icon{font-size:1.4rem;margin-bottom:.75rem;}
+    .feat-title{font-weight:700;margin-bottom:.4rem;font-size:.9rem;}
+    .feat-desc{font-size:.75rem;color:var(--text-dim);font-family:'Space Mono',monospace;line-height:1.6;}
+    .idp-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(124,58,237,.15);border:1px solid var(--accent2);padding:.3rem .8rem;font-family:'Space Mono',monospace;font-size:.7rem;color:#a78bfa;margin-bottom:1rem;}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">ZeroGuard<span>//</span>IAM</a>
+    {% if user %}
+      <a href="{{ '/admin' if user.role == 'admin' else '/chat' }}" class="nav-btn">Dashboard →</a>
+    {% else %}
+      <a href="/login" class="nav-btn">Sign In →</a>
+    {% endif %}
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="idp-badge">🔐 Powered by ZeroGuard IDP</div>
+      <div class="tag"><span class="dot"></span> OAuth 2.0 + OIDC + SSO</div>
+      <h1>Zero Trust <span class="accent">Identity</span><br>& Access Platform</h1>
+      <p class="desc">Enterprise-grade IAM with a dedicated Identity Provider — Authorization Code Flow, PKCE, RS256 tokens, OIDC Discovery, and Single Sign-On.</p>
+      <div class="cta">
+        <a href="/login" class="btn-primary">Sign In via IDP →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feat"><div class="feat-icon">🏛️</div><div class="feat-title">Dedicated IDP</div><div class="feat-desc">Standalone Identity Provider on port 5000. All auth logic isolated — client app stores zero credentials.</div></div>
+    <div class="feat"><div class="feat-icon">🔑</div><div class="feat-title">OAuth 2.0 + PKCE</div><div class="feat-desc">Authorization Code Flow with PKCE (RFC 7636). State parameter for CSRF protection. Auth codes are single-use.</div></div>
+    <div class="feat"><div class="feat-icon">🪪</div><div class="feat-title">OIDC ID Tokens</div><div class="feat-desc">RS256-signed ID tokens with standard claims. Client verifies signature using IDP's public JWKS — no shared secret.</div></div>
+    <div class="feat"><div class="feat-icon">🌐</div><div class="feat-title">Single Sign-On</div><div class="feat-desc">Login once at the IDP — all registered client apps share your session. Logout everywhere simultaneously.</div></div>
+    <div class="feat"><div class="feat-icon">🤖</div><div class="feat-title">AI Chat + Threat Detection</div><div class="feat-desc">Groq-powered Llama 3 chat with real-time prompt threat detection. Role-aware responses from IDP token claims.</div></div>
+    <div class="feat"><div class="feat-icon">📋</div><div class="feat-title">OIDC Discovery</div><div class="feat-desc">Fully spec-compliant discovery document at /.well-known/openid-configuration. Auto-configurable clients.</div></div>
+  </section>
+</body>
+</html>

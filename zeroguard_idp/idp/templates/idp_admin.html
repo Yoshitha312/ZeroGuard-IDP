@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>ZeroGuard IDP — Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#00ff88;--accent2:#7c3aed;--text:#e8e8f0;--text-dim:#888899;--danger:#ff4444;--warn:#ffaa00;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;padding:2rem;}
+    h1{font-family:'Syne',sans-serif;color:var(--accent);font-size:1.5rem;margin-bottom:.3rem;}
+    .sub{color:var(--text-dim);font-size:.8rem;margin-bottom:2rem;}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:2rem;}
+    .stat{background:var(--surface);border:1px solid var(--border);padding:1.2rem;border-bottom:2px solid var(--accent);}
+    .stat-val{font-size:2rem;font-weight:700;color:var(--accent);}
+    .stat-label{font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem;}
+    h2{font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;color:var(--text-dim);margin:1.5rem 0 .75rem;border-bottom:1px solid var(--border);padding-bottom:.5rem;}
+    table{width:100%;border-collapse:collapse;font-size:.75rem;margin-bottom:2rem;}
+    th{text-align:left;padding:.6rem 1rem;background:var(--surface2);color:var(--text-dim);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;}
+    td{padding:.6rem 1rem;border-bottom:1px solid rgba(42,42,58,.5);}
+    .badge{display:inline-block;padding:.15rem .5rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;}
+    .badge-critical{background:rgba(255,68,68,.15);color:var(--danger);border:1px solid var(--danger);}
+    .badge-warning{background:rgba(255,170,0,.15);color:var(--warn);border:1px solid var(--warn);}
+    .badge-info{background:rgba(0,255,136,.1);color:var(--accent);border:1px solid var(--accent);}
+    a{color:var(--accent);text-decoration:none;font-size:.75rem;}
+  </style>
+</head>
+<body>
+  <h1>ZeroGuard IDP — Admin Panel</h1>
+  <p class="sub">Identity Provider Management</p>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-val">{{ users }}</div><div class="stat-label">Total Users</div></div>
+    <div class="stat"><div class="stat-val">{{ clients }}</div><div class="stat-label">OAuth Clients</div></div>
+  </div>
+
+  <h2>Recent Audit Events</h2>
+  <table>
+    <thead><tr><th>Time</th><th>Event</th><th>User</th><th>Client</th><th>Severity</th><th>Details</th></tr></thead>
+    <tbody>
+      {% for l in logs %}
+      <tr>
+        <td style="color:var(--text-dim)">{{ l.timestamp.strftime('%H:%M:%S') }}</td>
+        <td>{{ l.event }}</td>
+        <td>{{ l.user_id or '—' }}</td>
+        <td>{{ l.client_id or '—' }}</td>
+        <td><span class="badge badge-{{ l.severity }}">{{ l.severity }}</span></td>
+        <td style="color:var(--text-dim)">{{ l.details or '' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p><a href="/admin/clients">→ Manage OAuth Clients (API)</a> &nbsp;|&nbsp; <a href="/admin/users">→ Manage Users (API)</a></p>
+</body>
+</html>
