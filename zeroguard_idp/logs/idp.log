@@ -57,3 +57,553 @@
 2026-03-31 11:21:27,013 [INFO] 127.0.0.1 - - [31/Mar/2026 11:21:27] "[33mGET /register HTTP/1.1[0m" 404 -
 2026-03-31 11:21:28,353 [INFO] 127.0.0.1 - - [31/Mar/2026 11:21:28] "[33mGET /register HTTP/1.1[0m" 404 -
 2026-03-31 11:22:52,223 [INFO] 127.0.0.1 - - [31/Mar/2026 11:22:52] "[33mGET /register HTTP/1.1[0m" 404 -
+2026-04-04 17:56:52,389 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-04 17:56:52,389 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 17:56:52,390 [INFO]  * Restarting with stat
+2026-04-04 17:56:52,587 [WARNING]  * Debugger is active!
+2026-04-04 17:56:52,596 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:01:11,130 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:11] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:11,144 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 18:01:13,063 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:13] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:13,519 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:13] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:13,683 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:13] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:13,849 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:13] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:14,016 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:14] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:14,183 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:14] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:01:20,359 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:20] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 18:01:26,948 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:26] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 18:01:47,757 [INFO] 127.0.0.1 - - [04/Apr/2026 18:01:47] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 18:02:14,461 [INFO] 127.0.0.1 - - [04/Apr/2026 18:02:14] "POST /admin/login HTTP/1.1" 200 -
+2026-04-04 18:02:14,477 [INFO] 127.0.0.1 - - [04/Apr/2026 18:02:14] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 18:02:30,370 [INFO] 127.0.0.1 - - [04/Apr/2026 18:02:30] "GET /admin/users HTTP/1.1" 200 -
+2026-04-04 18:02:58,311 [INFO] 127.0.0.1 - - [04/Apr/2026 18:02:58] "GET /admin/users HTTP/1.1" 200 -
+2026-04-04 18:03:16,368 [INFO] 127.0.0.1 - - [04/Apr/2026 18:03:16] "GET /admin/clients HTTP/1.1" 200 -
+2026-04-04 18:06:20,295 [INFO] 127.0.0.1 - - [04/Apr/2026 18:06:20] "GET /auth/register HTTP/1.1" 200 -
+2026-04-04 18:06:55,840 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-04 18:06:55,842 [INFO] 127.0.0.1 - - [04/Apr/2026 18:06:55] "POST /auth/register HTTP/1.1" 200 -
+2026-04-04 18:07:38,469 [INFO] 127.0.0.1 - - [04/Apr/2026 18:07:38] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Vp3u8yds819NxkC_pO4cCXOa-4R_yv8N&code_challenge=L-KEelp6-54Rt7j3Ca-RcwG8PXYPzLP_W7atYqCbsto&code_challenge_method=S256&nonce=IGxRIoq85SpyiSOEPH_fgw2dDiTWzof8 HTTP/1.1" 200 -
+2026-04-04 18:08:22,896 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:22] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Q7r2pDuPNI3zAmkbSHu1wF9eMyreJFYo&code_challenge=b4u9npU65tSuNGiVn_o_uEkzjGTRFIhIFWAUzFFFuIk&code_challenge_method=S256&nonce=YejSl41iR3mP8aprLi448BCcbelshY3T HTTP/1.1" 200 -
+2026-04-04 18:08:31,115 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:31] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 18:08:37,170 [WARNING] [TOTP_FAILED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:08:37,175 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:37] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 18:08:41,540 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:08:41,548 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:08:41,551 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:41] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-04 18:09:07,012 [INFO] 127.0.0.1 - - [04/Apr/2026 18:09:07] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 18:09:18,948 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:09:18,952 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:09:18,953 [INFO] 127.0.0.1 - - [04/Apr/2026 18:09:18] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-04 18:25:15,865 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/auth_routes.py', reloading
+2026-04-04 18:25:15,924 [INFO]  * Restarting with stat
+2026-04-04 18:25:16,222 [WARNING]  * Debugger is active!
+2026-04-04 18:25:16,227 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:25:24,479 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/auth_routes.py', reloading
+2026-04-04 18:25:24,536 [INFO]  * Restarting with stat
+2026-04-04 18:25:24,802 [WARNING]  * Debugger is active!
+2026-04-04 18:25:24,806 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:25:41,548 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:41] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 18:25:47,199 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:47] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:47,831 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:47] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:48,018 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:48] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:48,759 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:48] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:48,904 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:48] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:49,055 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:49,221 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:49,353 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:49,520 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:25:49,687 [INFO] 127.0.0.1 - - [04/Apr/2026 18:25:49] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:26:00,856 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:00] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:26:01,055 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:01] "[33mGET / HTTP/1.1[0m" 404 -
+2026-04-04 18:26:03,024 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:03] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 18:26:03,626 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:03] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 18:26:03,792 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:03] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 18:26:03,956 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:03] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 18:26:06,072 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:06] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 18:26:08,633 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:08] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 18:26:14,833 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:14,836 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:14] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Q7r2pDuPNI3zAmkbSHu1wF9eMyreJFYo&code_challenge=b4u9npU65tSuNGiVn_o_uEkzjGTRFIhIFWAUzFFFuIk&code_challenge_method=S256&nonce=YejSl41iR3mP8aprLi448BCcbelshY3T HTTP/1.1[0m" 302 -
+2026-04-04 18:26:17,289 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:17,291 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:17] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=OM2mNfvO3h_fW9zfK_w82j06fqPhFb6w&code_challenge=kSzLCj5cMh3lqLeLdeq_v3jgdztxP5Oi9Vxjwb6Jz3g&code_challenge_method=S256&nonce=B2VaQMNZaEsV6SoE2jSsGkgQUJMzkiRW HTTP/1.1[0m" 302 -
+2026-04-04 18:26:17,405 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:17,406 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:17] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:26:17,408 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:17] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 18:26:20,384 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:20,386 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:20] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=KN5y2rPOPY-ftJm9gWuVr3myR3paP809&code_challenge=7o_AORI29uRP5wmRDaXxi-ILU00EDAff0NmQiv1rsj0&code_challenge_method=S256&nonce=C6Jka3bkl9GcaF1F2vAuZwl5AbJ3JvQP HTTP/1.1[0m" 302 -
+2026-04-04 18:26:20,500 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:20,501 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:20] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:26:21,340 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:21,341 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:21] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=W9CzzlpmintaWD1HHXfHtGiLq40JhP6Z&code_challenge=F2uljowhBLc2pSHDGBrIobQdMtfbZprgOUGsPzSEhpY&code_challenge_method=S256&nonce=9XGXVlAqhiINpHO8ooVWJU1rrZyc5GEO HTTP/1.1[0m" 302 -
+2026-04-04 18:26:21,453 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:21,453 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:21] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:26:29,727 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:29,729 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:29] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=efpDC0uwxgfmAYoEdEjr-7nYfgr_3DwY&code_challenge=UvuNnUMpQvLD1aKqWvnXM06i3gOWKf2bLdF0BMXO9UI&code_challenge_method=S256&nonce=Ucqrz79NAkIm9wADmKl6Jy-iFUDKKA53 HTTP/1.1[0m" 302 -
+2026-04-04 18:26:29,836 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:26:29,837 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:29] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:27:29,010 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:27:29,012 [INFO] 127.0.0.1 - - [04/Apr/2026 18:27:29] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=rsFsQ3Qi1a1oH0xijSgnsxJcMYjRR0Z7&code_challenge=1z7pAVmlbkGHb3aiDiMy3nkYd54fX4b2ZFnwGHeTvc4&code_challenge_method=S256&nonce=K13pLyFXDET0PgmPOzM-RDw4bsYpdYO3 HTTP/1.1[0m" 302 -
+2026-04-04 18:27:29,126 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:27:29,127 [INFO] 127.0.0.1 - - [04/Apr/2026 18:27:29] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:42:53,645 [INFO] 127.0.0.1 - - [04/Apr/2026 18:42:53] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=u91ClmZDMFffGoE_b9EPQ0p1Pru_hKF9&code_challenge=38Th8tnHTEd9ho7zuXGd6XgzlY_QNIlavyQAWCaesg0&code_challenge_method=S256&nonce=leMQe_xvk4hOUMJe4Va67qEwfADPBE2N HTTP/1.1" 200 -
+2026-04-04 18:42:53,666 [INFO] 127.0.0.1 - - [04/Apr/2026 18:42:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 18:43:05,630 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:05] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 18:43:14,121 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:14,123 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:14,125 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:14] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-04 18:43:14,236 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:14,237 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:14] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:43:14,239 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:14] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 18:43:16,336 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:16,337 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:16] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=K8uQGxmQvQHSBPglOebNeJ9GjsUaoDtx&code_challenge=mpUslS7Vb2H-9xOkrx6Nt1yx1xhAngDTKhcB4DyXSPw&code_challenge_method=S256&nonce=OcDcIHebgl-eG4Rqv5WkutfmYi2TSMiF HTTP/1.1[0m" 302 -
+2026-04-04 18:43:16,444 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:16,445 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:16] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 18:43:17,202 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:17,205 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:17] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=YbtRx4ytO0FO_Q19ghbJ_xyjtiwZco29&code_challenge=hRo1PuTxbPu9lACeh3VAZ-q72IZ8moMaWC9hAyTiTIg&code_challenge_method=S256&nonce=G3lPKkPMGAf98duqXoAU56tifKdIc1fm HTTP/1.1[0m" 302 -
+2026-04-04 18:43:17,327 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 18:43:17,328 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:17] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:06:10,371 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-04 20:06:10,371 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 20:06:10,371 [INFO]  * Restarting with stat
+2026-04-04 20:06:10,577 [WARNING]  * Debugger is active!
+2026-04-04 20:06:10,583 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:07:10,928 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:10] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 20:07:10,949 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 20:07:17,526 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:17] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:07:27,229 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:27] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 20:07:53,461 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:53] "GET / HTTP/1.1" 200 -
+2026-04-04 20:09:20,007 [INFO] 127.0.0.1 - - [04/Apr/2026 20:09:20] "POST /admin/login HTTP/1.1" 200 -
+2026-04-04 20:09:20,022 [INFO] 127.0.0.1 - - [04/Apr/2026 20:09:20] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 20:10:01,095 [INFO] 127.0.0.1 - - [04/Apr/2026 20:10:01] "GET /admin/users HTTP/1.1" 200 -
+2026-04-04 20:10:23,129 [INFO] 127.0.0.1 - - [04/Apr/2026 20:10:23] "GET /admin/clients HTTP/1.1" 200 -
+2026-04-04 20:11:07,632 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:07] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=L1b-0nFPHd8ExJcHMFRdeuoCqxT9INkP&code_challenge=hmPMHc0lNM4T7kNlFcP1skLWn-5kxM8Gm31qc3RNzhA&code_challenge_method=S256&nonce=kIO2Y7WKgzN0GGmMtuETtKCHNw1WFS4U HTTP/1.1" 200 -
+2026-04-04 20:11:28,650 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:28] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-04 20:11:35,483 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:11:35,486 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:11:35,487 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:35] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-04 20:11:35,597 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:11:35,598 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:35] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:11:35,600 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:35] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:12:53,798 [INFO] 127.0.0.1 - - [04/Apr/2026 20:12:53] "GET /auth/register HTTP/1.1" 200 -
+2026-04-04 20:13:29,729 [INFO] [USER_REGISTERED] user=3 client=None | role=user | ip=127.0.0.1
+2026-04-04 20:13:29,731 [INFO] 127.0.0.1 - - [04/Apr/2026 20:13:29] "POST /auth/register HTTP/1.1" 200 -
+2026-04-04 20:14:13,481 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:13,483 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:13] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=H4iM0CrtRsCX3KM8oAAhTHjSJDjqOMYT&code_challenge=JdTRNOHR6jTUCSHKlUQSx7CFYaGy7uP6ngkrgi4-20g&code_challenge_method=S256&nonce=XNWf0dsgOmNWkJBjFe0M5VuGmTmRZrBz HTTP/1.1[0m" 302 -
+2026-04-04 20:14:13,603 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:13,604 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:13] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:14:20,378 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:20,380 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:20] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=4-Hij-2bEMmkxS5NHzOJwE-WO4MTfZre&code_challenge=M6BwSVesAtblfO6GZnXhN496wtplYGE5GgKI0sl-iX8&code_challenge_method=S256&nonce=WnedQKvY6VMLTlzyc8vqlZPmxZbTTfsu HTTP/1.1[0m" 302 -
+2026-04-04 20:14:20,503 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:20,504 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:20] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:14:33,494 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:33] "GET /auth/register HTTP/1.1" 200 -
+2026-04-04 20:14:36,449 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:36] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 20:14:39,478 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:39] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 20:14:42,861 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:42] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:14:47,815 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:47,817 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:47] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=eV7Vdlc-daLHgA8nxBDTWfi_tFih5p-P&code_challenge=P3CKcOthkO8aXmgqeTXRwYgJlg4bWiicEADMVPTFzHo&code_challenge_method=S256&nonce=POYnRQlD2-87D-6NQg9-Nsf5PzYrawCg HTTP/1.1[0m" 302 -
+2026-04-04 20:14:47,937 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:14:47,938 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:47] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:50:28,909 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/utils/token_service.py', reloading
+2026-04-04 20:50:28,959 [INFO]  * Restarting with stat
+2026-04-04 20:50:29,177 [WARNING]  * Debugger is active!
+2026-04-04 20:50:29,181 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:50:33,318 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/utils/token_service.py', reloading
+2026-04-04 20:50:33,370 [INFO]  * Restarting with stat
+2026-04-04 20:50:33,567 [WARNING]  * Debugger is active!
+2026-04-04 20:50:33,570 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:51:05,640 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-04 20:51:05,640 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 20:51:05,640 [INFO]  * Restarting with stat
+2026-04-04 20:51:05,830 [WARNING]  * Debugger is active!
+2026-04-04 20:51:05,834 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:51:13,957 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:13] "GET / HTTP/1.1" 200 -
+2026-04-04 20:51:18,134 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:18] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 20:51:18,729 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:18] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 20:51:18,904 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:18] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-04 20:51:21,831 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:21] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:51:21,961 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:21] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:51:22,133 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:22] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:51:24,136 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:24] "GET /admin/ HTTP/1.1" 200 -
+2026-04-04 20:51:29,256 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:51:29,259 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:29] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=7UwBGi_BAzNVM3AJuArH0IxW3TVAhALC&code_challenge=rTkqTzEAagKqwbCfXXlONghFO5CEifeEqlYjMmCaZZs&code_challenge_method=S256&nonce=C0SzkE4Fbv4RLEP5o6IFllC1P5O63roW HTTP/1.1[0m" 302 -
+2026-04-04 20:51:29,382 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:51:29,382 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:29] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 20:51:29,385 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:29] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 20:52:39,000 [INFO] 127.0.0.1 - - [04/Apr/2026 20:52:39] "GET /auth/register HTTP/1.1" 200 -
+2026-04-04 20:53:02,634 [INFO] [USER_REGISTERED] user=4 client=None | role=user | ip=127.0.0.1
+2026-04-04 20:53:02,635 [INFO] 127.0.0.1 - - [04/Apr/2026 20:53:02] "POST /auth/register HTTP/1.1" 200 -
+2026-04-04 20:54:39,253 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:54:39,256 [INFO] 127.0.0.1 - - [04/Apr/2026 20:54:39] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=rKW-y69VtL18bpGzojkaLj4VToQvEsH4&code_challenge=ypeSmicDHk2t8iYu4a3FMw6QufgO3Z-Z6g9qSTUFXb4&code_challenge_method=S256&nonce=Wpmvu-XQ6ga6MBudUVZpR-TCzVOzfuF9 HTTP/1.1[0m" 302 -
+2026-04-04 20:54:39,376 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 20:54:39,377 [INFO] 127.0.0.1 - - [04/Apr/2026 20:54:39] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:00:21,216 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/utils/token_service.py', reloading
+2026-04-04 21:00:21,266 [INFO]  * Restarting with stat
+2026-04-04 21:00:21,575 [WARNING]  * Debugger is active!
+2026-04-04 21:00:21,579 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 21:00:37,733 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:37,735 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:37] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=qBKWHnTl8NOrWLnMWcbmXh5ZR3gNg0vG&code_challenge=K6xp-wgdSVNh_LhYjTBrw4yf5XFOfDrRB9Sj1ZhjUtI&code_challenge_method=S256&nonce=uy_KjtuKOGhllBJ7GOu5YyOAFgxsyuwK HTTP/1.1[0m" 302 -
+2026-04-04 21:00:37,895 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:37,896 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:37] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:00:37,898 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:37] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-04 21:00:39,394 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:39,396 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:39] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=80MjyirbTGw5fAIIOWAnjGe1z8mdUO2O&code_challenge=fL8Go8GrxcWtZGErfZRFT272nPrR6pjugw_Yrr6VWCo&code_challenge_method=S256&nonce=pQA5EbK5l6sTu2M4XmCHHckJoWDKqMbY HTTP/1.1[0m" 302 -
+2026-04-04 21:00:39,520 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:39,520 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:39] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:00:47,360 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:47,362 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:47] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=TfUM6u2o1rXUYO9YNWy511DVwepBIi0k&code_challenge=LnmLxI1zEjXka1X9RGKaAzjmOGKiUQ7kSUzdajqflr0&code_challenge_method=S256&nonce=HXOqKNawFLYZsXC2z9QLmNuxRigy-McE HTTP/1.1[0m" 302 -
+2026-04-04 21:00:47,469 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:47,470 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:47] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:00:49,914 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:49,917 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:49] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=sj-eWKtYOER0iBRlNigduUN1-nVNwxX6&code_challenge=N8lqJDs91okaXBdpNmN19X3OQei7zVwI-zsSTlmOYMY&code_challenge_method=S256&nonce=u-m4UoPaqcGet573quEIs7xUNtRvonuI HTTP/1.1[0m" 302 -
+2026-04-04 21:00:50,034 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:50,035 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:50] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:00:58,914 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:58,916 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:58] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=-tiUNq5blRFzrypsxEjRhlilzkdcupNp&code_challenge=ZJ4UEcnGWHvJY8uZhYDy53_Ko0urUE5AM-_VuhVu8Ms&code_challenge_method=S256&nonce=k9rvo-bPU6Htn6ot9dLotk9eqwKO1b08 HTTP/1.1[0m" 302 -
+2026-04-04 21:00:59,033 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:00:59,034 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:59] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:01:04,407 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:01:04,410 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:04] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=uiPF9W_J3zJz8b85fFaIG3AmBkg-YWYj&code_challenge=HT90cdF0rVteTgyriWRyyj-FDv3XYMv3FXat2isxCTc&code_challenge_method=S256&nonce=pN0_bYMopHOfb3p1VpTtd713vrzm6ygb HTTP/1.1[0m" 302 -
+2026-04-04 21:01:04,525 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:01:04,526 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:04] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-04 21:01:05,696 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:01:05,698 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:05] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=UuIup0Bs7gbRZFatCpEWgR2FpJANSAJi&code_challenge=Ay4U4CJLXWK6S72StNRlGn75h6TAsGxB0nBHbPTLBV8&code_challenge_method=S256&nonce=y-hPOztfo_mU5qmdOqMBtWG2XtDZkqVp HTTP/1.1[0m" 302 -
+2026-04-04 21:01:05,820 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-04 21:01:05,821 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:05] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:23:57,972 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://127.0.0.1:5008
+2026-04-05 07:23:57,972 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 07:23:57,973 [INFO]  * Restarting with stat
+2026-04-05 07:23:58,185 [WARNING]  * Debugger is active!
+2026-04-05 07:23:58,190 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:24:11,408 [INFO] 127.0.0.1 - - [05/Apr/2026 07:24:11] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=qYN51bfnfFD4PWN_An4y9UPWWJgsWpj7&code_challenge=VZebskYvyRSJjnMs3jm23Me9TPDtzxz5gAausPNHNII&code_challenge_method=S256&nonce=q9NpMb29iVre6bcqkMD5BIFtetXDyJYE HTTP/1.1" 200 -
+2026-04-05 07:25:02,966 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:02] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 07:25:09,540 [INFO] [LOGIN_SUCCESS] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:25:09,543 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:25:09,544 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:09] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 07:25:09,693 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:25:09,694 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:09] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:25:09,697 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:09] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 07:25:12,050 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:25:12,053 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:12] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK&code_challenge=LI-J8R3xs5pzFWO0X3Qlr3i__PtTUrT58E-DPvmwRtY&code_challenge_method=S256&nonce=LxNXwYfSFINRBuQ5hHX26vdFvNV-c1TL HTTP/1.1[0m" 302 -
+2026-04-05 07:25:12,165 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:25:12,166 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:12] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:39:41,839 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/utils/token_service.py', reloading
+2026-04-05 07:39:41,894 [INFO]  * Restarting with stat
+2026-04-05 07:39:42,200 [WARNING]  * Debugger is active!
+2026-04-05 07:39:42,206 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:40:07,957 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/discovery_routes.py', reloading
+2026-04-05 07:40:08,013 [INFO]  * Restarting with stat
+2026-04-05 07:40:08,326 [WARNING]  * Debugger is active!
+2026-04-05 07:40:08,330 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:41:35,614 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:41:35,617 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:35] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=qYN51bfnfFD4PWN_An4y9UPWWJgsWpj7&code_challenge=VZebskYvyRSJjnMs3jm23Me9TPDtzxz5gAausPNHNII&code_challenge_method=S256&nonce=q9NpMb29iVre6bcqkMD5BIFtetXDyJYE HTTP/1.1[0m" 302 -
+2026-04-05 07:42:28,533 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:28,534 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:28] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=IQg75lOAWtN91piFQ4EVUbNaaQ8BqpAx&code_challenge=aHzvhC2X6AyDYN8csWXcOydUosP-Jgr_qdeglZPurKE&code_challenge_method=S256&nonce=Nyxa2bKuk5p-2v8xgI0pBGxxEbTQwVOu HTTP/1.1[0m" 302 -
+2026-04-05 07:42:28,698 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:28,698 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:28] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:42:28,700 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:28] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 07:42:33,469 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:33,472 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:33] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=ohmFfwCMCFy7YO2TD7YppbUiboKVQhvj&code_challenge=seqnJEhCKqU8XgPoTmfOo53b4gheJMbbFuAoRznMAWA&code_challenge_method=S256&nonce=43OwfaYJ7klBYBCJ8ng9CNU5GVqNJHR8 HTTP/1.1[0m" 302 -
+2026-04-05 07:42:33,592 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:33,593 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:33] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:42:42,639 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:42,641 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:42] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=kimL0ef5gu-sHG7dQf650M_DUSSk9O2b&code_challenge=RndfstI_Oo1A-fz43LdgPnx7BBF13BPabaPlUjdThyQ&code_challenge_method=S256&nonce=YIv74Ozg32AY8I6u8e16Mx4ZXA91suqO HTTP/1.1[0m" 302 -
+2026-04-05 07:42:42,755 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:42:42,756 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:42] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:49:24,957 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:49:24,960 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:24] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=CzTMzvrPsP-_hXeM8_x_cOZTTprtyqD2&code_challenge=ws__lysbsDphpGT5pFFtsoIWGhNuYJmJ9t6uRLxnAYU&code_challenge_method=S256&nonce=1nVu0WEXOIUNNWjSF2MVrIgO0tWg0nUA HTTP/1.1[0m" 302 -
+2026-04-05 07:49:25,081 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:49:25,082 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:25] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:49:25,084 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:25] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 07:50:45,611 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 07:50:45,611 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 07:50:45,612 [INFO]  * Restarting with stat
+2026-04-05 07:50:45,801 [WARNING]  * Debugger is active!
+2026-04-05 07:50:45,805 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:51:41,829 [INFO] 127.0.0.1 - - [05/Apr/2026 07:51:41] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 07:51:59,002 [INFO] 127.0.0.1 - - [05/Apr/2026 07:51:59] "GET / HTTP/1.1" 200 -
+2026-04-05 07:52:19,823 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:19] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 07:52:38,845 [INFO] [USER_REGISTERED] user=5 client=None | role=user | ip=127.0.0.1
+2026-04-05 07:52:38,847 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:38] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 07:52:55,082 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:52:55,084 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:55] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=0lUFvDmirAOlBf8mVcO1t_GhgYEtOTnx&code_challenge=3nWmgaHl15NeLh0YSzeoTUcAx_axyh7xGz4-tJxrFKY&code_challenge_method=S256&nonce=oTE5AciuFw2MNyjbVPOgESVdlWbI0nEx HTTP/1.1[0m" 302 -
+2026-04-05 07:52:55,203 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 07:52:55,204 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:55] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 07:52:55,206 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:55] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 08:03:22,781 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:03:22,781 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:03:22,781 [INFO]  * Restarting with stat
+2026-04-05 08:03:22,973 [WARNING]  * Debugger is active!
+2026-04-05 08:03:22,977 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:03:32,943 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:32,946 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:32] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=ytUvZTzexZXQ7ty8N_XeoumUyb0NO2KF&code_challenge=A07d2pdt6r-N-qToXBtc6SRW3btbfl2B2yNqUvLqW0I&code_challenge_method=S256&nonce=_lkGzu7xDqhqolo3YgOOc1y8A5dfQ86i HTTP/1.1[0m" 302 -
+2026-04-05 08:03:33,108 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:33,109 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:33] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:03:33,111 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:33] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 08:03:36,967 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:36,969 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:36] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Xx-WVO4Fuj4LgqaxDiJN1HQJMStNVBsH&code_challenge=pM31qohspMaFDRmEMsv5r8BjO-pAc5Z01hMcpUzbBB4&code_challenge_method=S256&nonce=xNrnRN_1u7N0YfwLl_Up41vo1mbaIVhs HTTP/1.1[0m" 302 -
+2026-04-05 08:03:37,083 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:37,084 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:03:37,716 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:37,718 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=DzturO-XMtNWvzYLMohNaFDEfDHcHtek&code_challenge=xk_jq4_Pev2zPvcRF0UXUbHoAhc73raBuicYJdz0Bq4&code_challenge_method=S256&nonce=GQTsFvJLhmlZwNNuZeBr-Dy6stg7wXC_ HTTP/1.1[0m" 302 -
+2026-04-05 08:03:37,831 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:37,831 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:03:38,274 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:38,276 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:38] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Cobu026PbAtUHBhwAn9nGK5f87BTI_UX&code_challenge=rXgN2BaAN9ZLUnrnouUtRbjeE4SqD3-Pde2FPAwhR4I&code_challenge_method=S256&nonce=8fmHGit8R9ktB89s3nz-ciTL-qSMDEPw HTTP/1.1[0m" 302 -
+2026-04-05 08:03:38,395 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:38,396 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:38] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:03:40,479 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:40,480 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:40] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=df0qqy0nYwmIjldi38gnde6FkXc3QbpZ&code_challenge=pI8pMm2Q4UydP8aVVVNOqnrlW-jNl6VtTqFyg5RKesc&code_challenge_method=S256&nonce=4WOoPHRxBzyXIyFfdBQ4IXirP8j5FIeO HTTP/1.1[0m" 302 -
+2026-04-05 08:03:40,584 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:03:40,585 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:40] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:09:23,809 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:23,811 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=yiDFy6GMEXepfZFvolZpuFLAf2G61UkJ&code_challenge=hTERvZ_x0G30nnwFXfvHO4y3yi8gZvw6TYVKEu1bIAw&code_challenge_method=S256&nonce=8bH8xrT8Dp5MWr9aF_rlCS-LVSrfPQBs HTTP/1.1[0m" 302 -
+2026-04-05 08:09:23,933 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:23,934 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:09:23,936 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 08:09:40,091 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:40,093 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:40] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=mHdyP6Y8o26c-kTmCYWk6Bw2WWGSi1ky&code_challenge=jIByx63TPuDzXxizB7JF-AD-wa7QWOnqYfhfJF52RLE&code_challenge_method=S256&nonce=-M21vtGA7ExiYGWg6e2dh-r9bFA2qDSr HTTP/1.1[0m" 302 -
+2026-04-05 08:09:40,231 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:40,232 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:40] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:09:41,064 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:41,065 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:41] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=YBPx1FcL4go9kvMbV4FrtkMa1d-S__jH&code_challenge=yC_fCngk6qyiUgpw2ImxUDXLSyqrDdBRb82B9tkwYJM&code_challenge_method=S256&nonce=cTnqHu3o7PwrY_jsWquz_vOI8qLLDq1U HTTP/1.1[0m" 302 -
+2026-04-05 08:09:41,179 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:41,179 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:41] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:09:42,063 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:42,065 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:42] "[32mGET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=QeWizH5r8sJZReqZoeWogPpU8x2O4Bad&code_challenge=1L5y67f5hwEtga3GNPwdo99PH-SpqYfU8zdJUe3enGM&code_challenge_method=S256&nonce=K0hcDSQjoqAzALk4YfvmsaZaaOoks9yA HTTP/1.1[0m" 302 -
+2026-04-05 08:09:42,173 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:09:42,174 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:42] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:14:10,875 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:14:10,875 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:14:10,875 [INFO]  * Restarting with stat
+2026-04-05 08:14:11,070 [WARNING]  * Debugger is active!
+2026-04-05 08:14:11,074 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:16:09,288 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/oauth_routes.py', reloading
+2026-04-05 08:16:09,329 [INFO]  * Restarting with stat
+2026-04-05 08:16:09,646 [WARNING]  * Debugger is active!
+2026-04-05 08:16:09,651 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:16:11,716 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/oauth_routes.py', reloading
+2026-04-05 08:16:11,775 [INFO]  * Restarting with stat
+2026-04-05 08:16:11,972 [WARNING]  * Debugger is active!
+2026-04-05 08:16:11,975 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:17:02,503 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:17:02,503 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:17:02,503 [INFO]  * Restarting with stat
+2026-04-05 08:17:02,697 [WARNING]  * Debugger is active!
+2026-04-05 08:17:02,700 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:17:39,695 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:17:39,695 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:17:39,695 [INFO]  * Restarting with stat
+2026-04-05 08:17:39,889 [WARNING]  * Debugger is active!
+2026-04-05 08:17:39,893 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:18:03,579 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_idp/idp/routes/oauth_routes.py', reloading
+2026-04-05 08:18:03,619 [INFO]  * Restarting with stat
+2026-04-05 08:18:03,820 [WARNING]  * Debugger is active!
+2026-04-05 08:18:03,824 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:18:43,769 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:18:43,769 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:18:43,770 [INFO]  * Restarting with stat
+2026-04-05 08:18:43,996 [WARNING]  * Debugger is active!
+2026-04-05 08:18:44,000 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:20:34,511 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:20:34,511 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:20:34,511 [INFO]  * Restarting with stat
+2026-04-05 08:20:34,707 [WARNING]  * Debugger is active!
+2026-04-05 08:20:34,711 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:22:37,397 [INFO] 127.0.0.1 - - [05/Apr/2026 08:22:37] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 08:23:01,375 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:01] "GET / HTTP/1.1" 200 -
+2026-04-05 08:23:02,779 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:02] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 08:23:17,422 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 08:23:17,424 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:17] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 08:23:49,005 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:49] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=Vtx53g4ra4YOkZ_SPUoKB12RrfQELeHS&code_challenge=GxzWqxMzPub0GXjvBbH5IZevt-Cfabpkldqlg4eWz98&code_challenge_method=S256&nonce=tPJgvlQrBH-D9GO_CpdXqGja7S-iYKAe HTTP/1.1" 200 -
+2026-04-05 08:24:04,417 [INFO] 127.0.0.1 - - [05/Apr/2026 08:24:04] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:24:10,539 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:24:10,546 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:24:10,550 [INFO] 127.0.0.1 - - [05/Apr/2026 08:24:10] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 08:24:10,712 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:24:10,713 [INFO] 127.0.0.1 - - [05/Apr/2026 08:24:10] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:24:10,715 [INFO] 127.0.0.1 - - [05/Apr/2026 08:24:10] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 08:43:18,664 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 08:43:18,664 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:43:18,665 [INFO]  * Restarting with stat
+2026-04-05 08:43:18,867 [WARNING]  * Debugger is active!
+2026-04-05 08:43:18,872 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:46:37,228 [INFO] 127.0.0.1 - - [05/Apr/2026 08:46:37] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 08:51:23,878 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 08:51:23,880 [INFO] 127.0.0.1 - - [05/Apr/2026 08:51:23] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 08:51:36,713 [INFO] 127.0.0.1 - - [05/Apr/2026 08:51:36] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=AucUPgiWjdFewcEdow5wIIORXTWcMpP8&code_challenge=hQk3y1EZOzuno6RJV0ShTh1hZbENGCFR3SDBCTlt8UA&code_challenge_method=S256&nonce=8mZXn7V4M2EWJ1UZ_blYQH_n4CY7fmF9 HTTP/1.1" 200 -
+2026-04-05 08:51:49,355 [WARNING] [LOGIN_FAILED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:51:49,356 [INFO] 127.0.0.1 - - [05/Apr/2026 08:51:49] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:52:05,792 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:05] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:52:12,279 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:52:12,285 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:52:12,289 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:12] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 08:52:12,306 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:12] "[31m[1mPOST /oauth/token HTTP/1.1[0m" 401 -
+2026-04-05 08:52:47,373 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:47] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=jOiDoiZk0jPerA33S1BpR8FtLVxaJYb-&code_challenge=6Igsbjo8oEppZnFm-UA1FtR1ZolPGPoX32dSA1yNqDs&code_challenge_method=S256&nonce=yU_OM1uLbswCHQGKxfOgVk3uYYgHcMMr HTTP/1.1" 200 -
+2026-04-05 08:52:56,246 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:56] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:53:04,742 [WARNING] [TOTP_FAILED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:53:04,748 [INFO] 127.0.0.1 - - [05/Apr/2026 08:53:04] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:53:11,127 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:53:11,131 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:53:11,134 [INFO] 127.0.0.1 - - [05/Apr/2026 08:53:11] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 08:53:11,146 [INFO] 127.0.0.1 - - [05/Apr/2026 08:53:11] "[31m[1mPOST /oauth/token HTTP/1.1[0m" 401 -
+2026-04-05 08:55:40,002 [INFO] 127.0.0.1 - - [05/Apr/2026 08:55:40] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 08:56:22,388 [INFO] [USER_REGISTERED] user=3 client=None | role=user | ip=127.0.0.1
+2026-04-05 08:56:22,389 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:22] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 08:56:32,988 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:32] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=wBBlqP91nGibMY_ih4SOStUQaIXpOhLp&code_challenge=PHd90gcpD8PQFWBkkI0N2jPmcoYSbCFRm5KbtYnLk4I&code_challenge_method=S256&nonce=Arrsfnn6njvLctg7I22qtIvBR804gNvz HTTP/1.1" 200 -
+2026-04-05 08:56:43,628 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:43] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 08:56:47,974 [INFO] [LOGIN_SUCCESS] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:56:47,978 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:56:47,981 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:47] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 08:56:48,217 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 08:56:48,218 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:48] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 08:56:48,220 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:48] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 11:37:26,396 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 11:37:26,396 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:38:30,325 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:30] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=wBBlqP91nGibMY_ih4SOStUQaIXpOhLp&code_challenge=PHd90gcpD8PQFWBkkI0N2jPmcoYSbCFRm5KbtYnLk4I&code_challenge_method=S256&nonce=Arrsfnn6njvLctg7I22qtIvBR804gNvz HTTP/1.1" 200 -
+2026-04-05 11:38:34,483 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:34] "GET / HTTP/1.1" 200 -
+2026-04-05 11:38:43,807 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:43] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:38:57,048 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 11:38:57,050 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:57] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 11:39:23,054 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:23] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy&code_challenge=an9Qv5hEn03c49llPZlPyc4k3i4h2N7t78UJCLLQEDk&code_challenge_method=S256&nonce=8nVdNbE5fJy3rsAAizQmfu9C9OdnX96d HTTP/1.1" 200 -
+2026-04-05 11:39:48,991 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:48] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 11:39:55,068 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:39:55,074 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:39:55,077 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:55] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 11:39:55,271 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:39:55,272 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:55] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 11:39:55,275 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:55] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 11:46:32,021 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 11:46:32,022 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:47:19,938 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:19] "GET / HTTP/1.1" 200 -
+2026-04-05 11:47:21,660 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:21] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:47:33,492 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 11:47:33,493 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:33] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 11:47:42,127 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:42] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=cUUmcWrD7jSG9Q-jRqVMwSotUK66lOyj&code_challenge=0lW7ZngPL1KkmTU3YtNwJunJ9-LoTtUqfkijlqJi8fc&code_challenge_method=S256&nonce=_56cJmbpUnK_Kg6A-DkEDOp47Lr67KBy HTTP/1.1" 200 -
+2026-04-05 11:47:53,306 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:53] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 11:47:59,470 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:47:59,477 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:47:59,480 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:59] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 11:47:59,491 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:59] "[31m[1mPOST /oauth/token HTTP/1.1[0m" 401 -
+2026-04-05 11:48:02,292 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:02] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=niSMAnr41E6jNftNWW-RwZ7Suj-RmULO&code_challenge=UeWfS3H2pdl2VZZwUDq9IhOH2i3fOIOVDaUVRuw8KqU&code_challenge_method=S256&nonce=VZwFm348YrpQwtXbNDiSMynbIZwL0wHS HTTP/1.1" 200 -
+2026-04-05 11:48:12,959 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:12] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 11:48:18,885 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:48:18,890 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:48:18,893 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:18] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 11:48:18,903 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:18] "[31m[1mPOST /oauth/token HTTP/1.1[0m" 401 -
+2026-04-05 11:50:06,546 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 11:50:06,546 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:50:21,574 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:21] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:50:25,748 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:25] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:50:37,503 [INFO] [USER_REGISTERED] user=3 client=None | role=user | ip=127.0.0.1
+2026-04-05 11:50:37,505 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:37] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 11:50:46,856 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:46] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=PYhXoDepz2jqnQe1B2lyOq3efqBnO3VB&code_challenge=Msk3j6szpIR4DpmuRWzPO64KFeB2R041b4foben8bck&code_challenge_method=S256&nonce=BLK50I7O2s1hJAWN3R9lgy1KtnxIOsW3 HTTP/1.1" 200 -
+2026-04-05 11:50:57,525 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:57] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 11:51:04,119 [INFO] [LOGIN_SUCCESS] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:51:04,127 [INFO] [AUTH_CODE_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:51:04,130 [INFO] 127.0.0.1 - - [05/Apr/2026 11:51:04] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 11:51:04,248 [INFO] [TOKENS_ISSUED] user=3 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:51:04,248 [INFO] 127.0.0.1 - - [05/Apr/2026 11:51:04] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 11:51:04,250 [INFO] 127.0.0.1 - - [05/Apr/2026 11:51:04] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 11:53:40,597 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 11:53:40,597 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:54:30,032 [INFO] 127.0.0.1 - - [05/Apr/2026 11:54:30] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:54:33,835 [INFO] 127.0.0.1 - - [05/Apr/2026 11:54:33] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 11:54:49,586 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 11:54:49,588 [INFO] 127.0.0.1 - - [05/Apr/2026 11:54:49] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 11:55:02,254 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:02] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=ZXzOSip055J-6LJjIf_NZzjyIKFR2wUh&code_challenge=pejlhytuatpaz7e7g4g8S7SyPvJEdj3a6jxaJ6hWmMY&code_challenge_method=S256&nonce=mTVi0NEYgwa-nPI80b6V-ZsE1-CObVhx HTTP/1.1" 200 -
+2026-04-05 11:55:13,375 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:13] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 11:55:17,065 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:55:17,072 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:55:17,075 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:17] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 11:55:17,197 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 11:55:17,197 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:17] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 11:55:17,200 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:17] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 11:59:38,434 [INFO] 127.0.0.1 - - [05/Apr/2026 11:59:38] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email&state=jVSFQvy2KNkoZCXmw6OF8g&code_challenge=b3RzJ3cR1VrbOfFfYjU1Rz80xQmH-TlkQrLFy6ASKS4&code_challenge_method=S256&nonce=8fRCfXtZV4Hi9wfNGohJCw HTTP/1.1" 200 -
+2026-04-05 11:59:58,323 [INFO] 127.0.0.1 - - [05/Apr/2026 11:59:58] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 12:00:05,532 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 12:00:05,536 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 12:00:05,538 [INFO] 127.0.0.1 - - [05/Apr/2026 12:00:05] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 12:00:41,448 [INFO] 127.0.0.1 - - [05/Apr/2026 12:00:41] "[31m[1mPOST /oauth/token HTTP/1.1[0m" 400 -
+2026-04-05 15:21:37,602 [INFO] 127.0.0.1 - - [05/Apr/2026 15:21:37] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 16:42:14,021 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5008
+ * Running on http://192.168.1.3:5008
+2026-04-05 16:42:14,022 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 16:43:57,884 [INFO] 127.0.0.1 - - [05/Apr/2026 16:43:57] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 16:44:22,817 [INFO] [USER_REGISTERED] user=2 client=None | role=user | ip=127.0.0.1
+2026-04-05 16:44:22,819 [INFO] 127.0.0.1 - - [05/Apr/2026 16:44:22] "POST /auth/register HTTP/1.1" 200 -
+2026-04-05 16:45:14,280 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:14] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=8vwgaXY-sW3Y9fD1QFJoAFgBaaDFMwDu&code_challenge=6xnyMVUjdgakR9fxisJIRfnvZcy96m6EsgT6Q8cLBXQ&code_challenge_method=S256&nonce=f2n1q0IwI7aecDC22phWfUZXjdeiOY0j HTTP/1.1" 200 -
+2026-04-05 16:45:26,369 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:26] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 16:45:34,271 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 16:45:34,276 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 16:45:34,279 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 16:45:34,407 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 16:45:34,407 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 16:45:34,410 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 17:13:20,599 [INFO] 127.0.0.1 - - [05/Apr/2026 17:13:20] "GET / HTTP/1.1" 200 -
+2026-04-05 17:14:07,462 [INFO] 127.0.0.1 - - [05/Apr/2026 17:14:07] "GET /auth/register HTTP/1.1" 200 -
+2026-04-05 17:15:10,228 [INFO] 127.0.0.1 - - [05/Apr/2026 17:15:10] "GET / HTTP/1.1" 200 -
+2026-04-05 17:15:43,055 [INFO] 127.0.0.1 - - [05/Apr/2026 17:15:43] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=C8TRKwTzBZ80nIXLl9ixzNSIk78zkIUj&code_challenge=ypV40qltJzDXhvWJY_iw6cLCbGf7SXE2WoKrgbvC8mE&code_challenge_method=S256&nonce=0ideD6Te6Pyl3QSfbX1ywOU2TWJN7hCS HTTP/1.1" 200 -
+2026-04-05 17:16:13,153 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:13] "GET /.well-known/jwks.json HTTP/1.1" 200 -
+2026-04-05 17:16:13,164 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:13] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=C8TRKwTzBZ80nIXLl9ixzNSIk78zkIUj&code_challenge=ypV40qltJzDXhvWJY_iw6cLCbGf7SXE2WoKrgbvC8mE&code_challenge_method=S256&nonce=0ideD6Te6Pyl3QSfbX1ywOU2TWJN7hCS HTTP/1.1" 200 -
+2026-04-05 17:16:24,140 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:24] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 17:16:35,885 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 17:16:35,891 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 17:16:35,895 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:35] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 17:16:50,490 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:50] "GET /oauth/authorize?response_type=code&client_id=zeroguard-client&redirect_uri=http://localhost:5001/callback&scope=openid+profile+email+roles&state=B6N5C8zFonoTAMbu41UYnjXsH3kisuU-&code_challenge=a-8i7R2j7DfAviYoZC2W8-9aEtMWo7KvyhPv6I1qpLw&code_challenge_method=S256&nonce=1famXwcfJeNII45K0Eo_yxEDOBVW4euD HTTP/1.1" 200 -
+2026-04-05 17:17:03,074 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:03] "POST /oauth/authorize HTTP/1.1" 200 -
+2026-04-05 17:17:08,015 [INFO] [LOGIN_SUCCESS] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 17:17:08,022 [INFO] [AUTH_CODE_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 17:17:08,026 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:08] "[32mPOST /oauth/authorize HTTP/1.1[0m" 302 -
+2026-04-05 17:17:08,148 [INFO] [TOKENS_ISSUED] user=2 client=zeroguard-client | None | ip=127.0.0.1
+2026-04-05 17:17:08,149 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:08] "POST /oauth/token HTTP/1.1" 200 -
+2026-04-05 17:17:42,281 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:42] "GET /.well-known/openid-configuration HTTP/1.1" 200 -
+2026-04-05 17:17:45,758 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:45] "GET /admin/ HTTP/1.1" 200 -
+2026-04-05 17:18:11,222 [INFO] 127.0.0.1 - - [05/Apr/2026 17:18:11] "GET /.well-known/jwks.json HTTP/1.1" 200 -

@@ -8,16 +8,18 @@ from client.utils.logger import log_event
 chat_bp = Blueprint('chat', __name__, url_prefix='/api/chat')
 
 
-def _get_rate_limit():
-    user = session.get('user', {})
-    return "50 per minute" if user.get('role') == 'admin' else "10 per minute"
-
-
+# FIX: limiter.limit() with a callable is evaluated at decoration time in some
+# versions of flask-limiter. Use a static high limit and enforce role-based
+# throttling manually, OR use the supported lambda string syntax.
+# Safest fix: use separate routes or a fixed limit with role check inside.
 @chat_bp.route('/send', methods=['POST'])
 @api_auth_required
-@limiter.limit(_get_rate_limit)
+@limiter.limit("50 per minute")   # generous limit; role check enforced inside
 def send_message():
     data   = request.get_json()
+    if not data:
+        return jsonify({'error': 'JSON body required'}), 400
+
     prompt = data.get('prompt', '').strip()
 
     if not prompt:

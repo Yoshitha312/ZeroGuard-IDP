@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZeroGuard IDP — Setup Authenticator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--surface:#111118;--surface2:#1a1a24;--border:#2a2a3a;--accent:#00ff88;--accent2:#7c3aed;--text:#e8e8f0;--text-dim:#888899;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,136,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+    .box{width:100%;max-width:480px;background:var(--surface);border:1px solid var(--border);padding:2.5rem;position:relative;z-index:1;}
+    .box::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+    .idp-badge{font-size:.65rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;}
+    h1{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent);margin-bottom:.3rem;}
+    .sub{font-size:.78rem;color:var(--text-dim);margin-bottom:1.5rem;}
+    .step{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--accent);padding:1rem;margin-bottom:1rem;font-size:.8rem;line-height:1.8;}
+    .step strong{color:var(--accent);}
+    .qr-wrap{text-align:center;padding:1.5rem;background:var(--surface2);border:1px solid var(--border);margin:1rem 0;}
+    .qr-wrap img{max-width:200px;border:4px solid white;display:block;margin:0 auto;}
+    .secret-box{background:var(--surface2);border:1px solid var(--border);padding:.75rem;font-size:.8rem;word-break:break-all;color:var(--accent);margin:.5rem 0;text-align:center;}
+    .btn{display:block;width:100%;margin-top:1.5rem;background:var(--accent);color:#000;font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700;padding:.75rem;border:none;cursor:pointer;text-align:center;text-decoration:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));}
+    .btn:hover{background:#00cc6a;}
+    .success-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(0,255,136,.1);border:1px solid var(--accent);padding:.3rem .8rem;font-size:.75rem;color:var(--accent);margin-bottom:1rem;}
+    .warning-box{background:rgba(255,170,0,.08);border:1px solid #ffaa00;border-left:3px solid #ffaa00;padding:.75rem 1rem;font-size:.75rem;color:#ffaa00;margin-top:1rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="idp-badge">ZeroGuard Identity Provider</div>
+    <div class="success-badge">✅ Account Created Successfully</div>
+    <h1>Setup Authenticator</h1>
+    <p class="sub">One more step — scan QR code with Google Authenticator</p>
+
+    <div class="step">
+      <strong>Step 1:</strong> Open <strong>Google Authenticator</strong> on your phone<br>
+      <strong>Step 2:</strong> Tap <strong>+</strong> → <strong>Scan a QR code</strong><br>
+      <strong>Step 3:</strong> Point camera at the QR code below
+    </div>
+
+    <div class="qr-wrap">
+      <img src="data:image/png;base64,{{ qr_code }}" alt="TOTP QR Code">
+    </div>
+
+    <p style="font-size:.72rem;color:var(--text-dim);margin:.5rem 0 .25rem;">Can't scan? Enter this secret manually:</p>
+    <div class="secret-box">{{ totp_secret }}</div>
+
+    <div class="step" style="margin-top:1rem;border-left-color:var(--accent2);">
+      <strong style="color:#a78bfa;">Account:</strong> {{ email }}<br>
+      <strong style="color:#a78bfa;">Issuer:</strong> ZeroGuard IDP<br>
+      <strong style="color:#a78bfa;">Type:</strong> Time-based (TOTP, 30 sec)
+    </div>
+
+    <div class="warning-box">
+      ⚠️ <strong>Save your TOTP secret above!</strong> You will need it every time you log in.
+      If you lose it, contact the admin to reset your account.
+    </div>
+
+    <!-- FIX: was pointing to localhost:5001 correctly, just making it explicit -->
+    <a href="http://localhost:5001" class="btn">Go to App & Login (port 5001) →</a>
+  </div>
+</body>
+</html>

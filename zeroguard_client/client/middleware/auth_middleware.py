@@ -1,11 +1,15 @@
 """
 Client Auth Middleware
 ----------------------
-Replaces the old PEP/PDP middleware.
-Now validates RS256 tokens using IDP's public JWKS — no shared secret.
+Validates RS256 tokens using IDP's public JWKS — no shared secret.
+
+FIX: admin_required was incorrectly stacking @api_auth_required as an inner
+     decorator using @wraps+@api_auth_required together, which caused the
+     wrapper to be called twice (double auth check + double wrapping).
+     Fixed by calling validate_access_token directly inside admin_required.
 """
 from functools import wraps
-from flask import session, redirect, url_for, jsonify, request
+from flask import session, redirect, jsonify, request
 from client.utils.oidc_client import validate_access_token
 
 
@@ -18,10 +22,8 @@ def login_required(fn):
             return redirect('/login')
         try:
             payload = validate_access_token(access_token)
-            # Attach claims to request context
             request.user_claims = payload
-        except Exception as e:
-            # Token expired or invalid — redirect to re-login
+        except Exception:
             session.clear()
             return redirect('/login')
         return fn(*args, **kwargs)
@@ -41,7 +43,6 @@ def api_auth_required(fn):
         except Exception as e:
             err = str(e)
             if 'expired' in err.lower():
-                # Try to refresh automatically
                 refresh_token = session.get('refresh_token')
                 if refresh_token:
                     try:
@@ -63,12 +64,24 @@ def api_auth_required(fn):
 
 
 def admin_required(fn):
-    """Require admin role."""
+    """
+    Require admin role.
+    FIX: Do NOT nest @api_auth_required here — call validate_access_token
+    directly to avoid double-wrapping which breaks Flask's routing.
+    """
     @wraps(fn)
-    @api_auth_required
     def wrapper(*args, **kwargs):
-        claims = getattr(request, 'user_claims', {})
-        if claims.get('role') != 'admin':
+        access_token = session.get('access_token')
+        if not access_token:
+            return jsonify({'error': 'Not authenticated', 'code': 'NO_SESSION'}), 401
+        try:
+            payload = validate_access_token(access_token)
+            request.user_claims = payload
+        except Exception:
+            session.clear()
+            return jsonify({'error': 'Invalid or expired token', 'code': 'TOKEN_INVALID'}), 401
+
+        if payload.get('role') != 'admin':
             return jsonify({'error': 'Admin role required'}), 403
         return fn(*args, **kwargs)
     return wrapper

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZeroGuard IDP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0a0a0f;--surface:#111118;--border:#2a2a3a;--accent:#00ff88;--accent2:#7c3aed;--text:#e8e8f0;--text-dim:#888899;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Space Mono',monospace;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,136,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;}
+    .box{max-width:560px;width:100%;position:relative;z-index:1;}
+    .badge{font-size:.65rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.5s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    h1{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:.5rem;}
+    .sub{color:var(--text-dim);font-size:.8rem;line-height:1.7;margin-bottom:2rem;}
+    .links{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+    .link-card{background:var(--surface);border:1px solid var(--border);padding:1rem 1.2rem;text-decoration:none;color:var(--text);transition:border-color .2s;}
+    .link-card:hover{border-color:var(--accent);}
+    .link-title{font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:.2rem;}
+    .link-desc{font-size:.7rem;color:var(--text-dim);}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="badge"><span class="dot"></span> Identity Provider</div>
+    <h1>ZeroGuard IDP</h1>
+    <p class="sub">This is the Identity Provider server (port 5008). It handles authentication for all registered client applications using OAuth 2.0 + OIDC.</p>
+    <div class="links">
+      <a class="link-card" href="/auth/register">
+        <div class="link-title">👤 Register</div>
+        <div class="link-desc">Create a new user account</div>
+      </a>
+      <a class="link-card" href="/admin/">
+        <div class="link-title">🛡️ Admin Panel</div>
+        <div class="link-desc">Manage users and OAuth clients</div>
+      </a>
+      <a class="link-card" href="/.well-known/openid-configuration">
+        <div class="link-title">📄 OIDC Discovery</div>
+        <div class="link-desc">OpenID Connect configuration</div>
+      </a>
+      <a class="link-card" href="/.well-known/jwks.json">
+        <div class="link-title">🔑 JWKS Keys</div>
+        <div class="link-desc">RSA public keys for token verification</div>
+      </a>
+    </div>
+    <!-- FIX: was pointing to localhost:5001 (correct) but said port 5000 in text -->
+    <p style="margin-top:1.5rem;font-size:.72rem;color:var(--text-dim);">
+      To login, go to the <a href="http://localhost:5001" style="color:var(--accent)">client app (port 5001)</a> and click "Sign In via IDP".
+    </p>
+  </div>
+</body>
+</html>

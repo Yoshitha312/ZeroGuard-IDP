@@ -36,3 +36,479 @@
 2026-03-31 11:19:07,070 [INFO] 127.0.0.1 - - [31/Mar/2026 11:19:07] "GET / HTTP/1.1" 200 -
 2026-03-31 11:19:08,023 [INFO] 127.0.0.1 - - [31/Mar/2026 11:19:08] "GET / HTTP/1.1" 200 -
 2026-03-31 11:20:24,491 [INFO] 127.0.0.1 - - [31/Mar/2026 11:20:24] "GET / HTTP/1.1" 200 -
+2026-04-04 18:05:54,711 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-04 18:05:54,711 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 18:05:54,712 [INFO]  * Restarting with stat
+2026-04-04 18:05:54,917 [WARNING]  * Debugger is active!
+2026-04-04 18:05:54,922 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:07:36,853 [INFO] 127.0.0.1 - - [04/Apr/2026 18:07:36] "GET / HTTP/1.1" 200 -
+2026-04-04 18:07:36,889 [INFO] 127.0.0.1 - - [04/Apr/2026 18:07:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 18:07:38,448 [INFO] 127.0.0.1 - - [04/Apr/2026 18:07:38] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:07:53,779 [INFO] 127.0.0.1 - - [04/Apr/2026 18:07:53] "GET / HTTP/1.1" 200 -
+2026-04-04 18:08:22,880 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:22] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:08:41,554 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:08:41,563 [INFO] 127.0.0.1 - - [04/Apr/2026 18:08:41] "GET /callback?code=hOpxm4w7-PHRKKF9T3PEM1_iwfMdb4DGw5alBAhndhE&state=Q7r2pDuPNI3zAmkbSHu1wF9eMyreJFYo HTTP/1.1" 200 -
+2026-04-04 18:09:18,957 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:09:18,960 [INFO] 127.0.0.1 - - [04/Apr/2026 18:09:18] "GET /callback?code=hAIEtBfFfoz247rI1TdbkbNQy0RoM46fmTejeYIAjrc&state=Q7r2pDuPNI3zAmkbSHu1wF9eMyreJFYo HTTP/1.1" 200 -
+2026-04-04 18:24:25,963 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:24:26,019 [INFO]  * Restarting with stat
+2026-04-04 18:24:26,296 [WARNING]  * Debugger is active!
+2026-04-04 18:24:26,300 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:25:26,123 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:25:26,175 [INFO]  * Restarting with stat
+2026-04-04 18:25:26,392 [WARNING]  * Debugger is active!
+2026-04-04 18:25:26,397 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:25:30,549 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/app.py', reloading
+2026-04-04 18:25:30,607 [INFO]  * Restarting with stat
+2026-04-04 18:25:30,812 [WARNING]  * Debugger is active!
+2026-04-04 18:25:30,816 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:26:14,841 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:26:14,854 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:14] "GET /callback?code=TOURwCW49SbIo009SR_6mkAis_m0Abpgfmk-Kmu-mmc&state=Q7r2pDuPNI3zAmkbSHu1wF9eMyreJFYo HTTP/1.1" 200 -
+2026-04-04 18:26:15,686 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:15] "GET / HTTP/1.1" 200 -
+2026-04-04 18:26:17,273 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:17] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:26:17,419 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:26:17,420 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:17] "GET /callback?code=pGLquQW7LQ59aZJlK-5lMVl6VPxQq2FIhh73Rfq3Pis&state=OM2mNfvO3h_fW9zfK_w82j06fqPhFb6w HTTP/1.1" 200 -
+2026-04-04 18:26:20,374 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:20] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:26:20,502 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:26:20,502 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:20] "GET /callback?code=bqCuWfaPl8K4Lv36FzLcCHeNR4N8HmM8W2QdaqaeQmg&state=KN5y2rPOPY-ftJm9gWuVr3myR3paP809 HTTP/1.1" 200 -
+2026-04-04 18:26:21,323 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:21] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:26:21,454 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:26:21,455 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:21] "GET /callback?code=tajS3DPHVBJSTHowi1sOio4_N9iXhm4AYQXLOk8Xig8&state=W9CzzlpmintaWD1HHXfHtGiLq40JhP6Z HTTP/1.1" 200 -
+2026-04-04 18:26:29,707 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:29] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:26:29,838 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:26:29,839 [INFO] 127.0.0.1 - - [04/Apr/2026 18:26:29] "GET /callback?code=xikVDy2o4ZUp6UX-6x-BPaI7W1WZgpb_IoFwcDuem2I&state=efpDC0uwxgfmAYoEdEjr-7nYfgr_3DwY HTTP/1.1" 200 -
+2026-04-04 18:27:25,089 [INFO] 127.0.0.1 - - [04/Apr/2026 18:27:25] "GET / HTTP/1.1" 200 -
+2026-04-04 18:27:29,002 [INFO] 127.0.0.1 - - [04/Apr/2026 18:27:29] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:27:29,128 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:27:29,129 [INFO] 127.0.0.1 - - [04/Apr/2026 18:27:29] "GET /callback?code=V0tDSqPfZvSXLPuwlXPWp4INhZLr-0F1_6oQ1sJEMVA&state=rsFsQ3Qi1a1oH0xijSgnsxJcMYjRR0Z7 HTTP/1.1" 200 -
+2026-04-04 18:32:00,194 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:32:00,253 [INFO]  * Restarting with stat
+2026-04-04 18:32:00,538 [WARNING]  * Debugger is active!
+2026-04-04 18:32:00,544 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:39:50,785 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:39:50,844 [INFO]  * Restarting with stat
+2026-04-04 18:39:51,130 [WARNING]  * Debugger is active!
+2026-04-04 18:39:51,135 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:42:47,928 [INFO] 127.0.0.1 - - [04/Apr/2026 18:42:47] "GET / HTTP/1.1" 200 -
+2026-04-04 18:42:47,959 [INFO] 127.0.0.1 - - [04/Apr/2026 18:42:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 18:42:53,619 [INFO] 127.0.0.1 - - [04/Apr/2026 18:42:53] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:43:14,248 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:43:14,252 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:14] "GET /callback?code=JD4_2l1CAeI2_ia3Ztsd61PVErEUwhHw_WWNkpwcrEo&state=u91ClmZDMFffGoE_b9EPQ0p1Pru_hKF9 HTTP/1.1" 200 -
+2026-04-04 18:43:16,317 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:16] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:43:16,446 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:43:16,447 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:16] "GET /callback?code=-YHy-C2Pq4EItQweHlm3I2er_czdzczIDXADintr8S8&state=K8uQGxmQvQHSBPglOebNeJ9GjsUaoDtx HTTP/1.1" 200 -
+2026-04-04 18:43:17,185 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:17] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 18:43:17,328 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 18:43:17,329 [INFO] 127.0.0.1 - - [04/Apr/2026 18:43:17] "GET /callback?code=o5ek29BbkkWwHcpeNeh8fYDdnq5PpxHDnkcEgWVyLlI&state=YbtRx4ytO0FO_Q19ghbJ_xyjtiwZco29 HTTP/1.1" 200 -
+2026-04-04 18:44:56,117 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:44:56,160 [INFO]  * Restarting with stat
+2026-04-04 18:44:56,446 [WARNING]  * Debugger is active!
+2026-04-04 18:44:56,451 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:45:13,885 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/app.py', reloading
+2026-04-04 18:45:13,937 [INFO]  * Restarting with stat
+2026-04-04 18:45:14,259 [WARNING]  * Debugger is active!
+2026-04-04 18:45:14,265 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:45:16,339 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/app.py', reloading
+2026-04-04 18:45:16,399 [INFO]  * Restarting with stat
+2026-04-04 18:45:16,600 [WARNING]  * Debugger is active!
+2026-04-04 18:45:16,604 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:45:19,719 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:45:19,770 [INFO]  * Restarting with stat
+2026-04-04 18:45:19,999 [WARNING]  * Debugger is active!
+2026-04-04 18:45:20,003 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:45:52,872 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:45:52,910 [INFO]  * Restarting with stat
+2026-04-04 18:45:53,110 [WARNING]  * Debugger is active!
+2026-04-04 18:45:53,114 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:45:59,736 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:45:59,749 [INFO] 127.0.0.1 - - [04/Apr/2026 18:45:59] "GET /callback?code=o5ek29BbkkWwHcpeNeh8fYDdnq5PpxHDnkcEgWVyLlI&state=YbtRx4ytO0FO_Q19ghbJ_xyjtiwZco29 HTTP/1.1" 200 -
+2026-04-04 18:46:00,235 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:46:00,238 [INFO] 127.0.0.1 - - [04/Apr/2026 18:46:00] "GET /callback?code=o5ek29BbkkWwHcpeNeh8fYDdnq5PpxHDnkcEgWVyLlI&state=YbtRx4ytO0FO_Q19ghbJ_xyjtiwZco29 HTTP/1.1" 200 -
+2026-04-04 18:46:00,417 [CRITICAL] [STATE_MISMATCH] sub=None | None | ip=127.0.0.1
+2026-04-04 18:46:00,421 [INFO] 127.0.0.1 - - [04/Apr/2026 18:46:00] "GET /callback?code=o5ek29BbkkWwHcpeNeh8fYDdnq5PpxHDnkcEgWVyLlI&state=YbtRx4ytO0FO_Q19ghbJ_xyjtiwZco29 HTTP/1.1" 200 -
+2026-04-04 18:46:29,214 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:46:29,269 [INFO]  * Restarting with stat
+2026-04-04 18:46:29,473 [WARNING]  * Debugger is active!
+2026-04-04 18:46:29,477 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 18:46:30,515 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 18:46:30,555 [INFO]  * Restarting with stat
+2026-04-04 18:46:30,755 [WARNING]  * Debugger is active!
+2026-04-04 18:46:30,759 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:06:48,469 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-04 20:06:48,469 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 20:06:48,469 [INFO]  * Restarting with stat
+2026-04-04 20:06:48,663 [WARNING]  * Debugger is active!
+2026-04-04 20:06:48,667 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:07:45,782 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:45] "GET / HTTP/1.1" 200 -
+2026-04-04 20:07:45,807 [INFO] 127.0.0.1 - - [04/Apr/2026 20:07:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-04 20:11:07,616 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:07] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:11:35,608 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:11:35,612 [INFO] 127.0.0.1 - - [04/Apr/2026 20:11:35] "GET /callback?code=-e8_fKzXQuViL9xeuSxxyFC1X2NHs9-LjpC99oacapE&state=L1b-0nFPHd8ExJcHMFRdeuoCqxT9INkP HTTP/1.1" 200 -
+2026-04-04 20:14:10,409 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:10] "GET / HTTP/1.1" 200 -
+2026-04-04 20:14:13,463 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:13] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:14:13,605 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:14:13,606 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:13] "GET /callback?code=25Zk2AjzSxtr-Cbw1kryvWNmzHn3SWuj48wBP4oRtQE&state=H4iM0CrtRsCX3KM8oAAhTHjSJDjqOMYT HTTP/1.1" 200 -
+2026-04-04 20:14:20,362 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:20] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:14:20,505 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:14:20,505 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:20] "GET /callback?code=qyjWTSQJAyCUJuQZfJMXJmOt2yFJuM6pfQl7blpn5tQ&state=4-Hij-2bEMmkxS5NHzOJwE-WO4MTfZre HTTP/1.1" 200 -
+2026-04-04 20:14:46,543 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:46] "GET / HTTP/1.1" 200 -
+2026-04-04 20:14:47,796 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:14:47,939 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:14:47,939 [INFO] 127.0.0.1 - - [04/Apr/2026 20:14:47] "GET /callback?code=nJvYwNAQfEzn6IoPudWkJChie5FGGSjHSPv8Zw1ZiCc&state=eV7Vdlc-daLHgA8nxBDTWfi_tFih5p-P HTTP/1.1" 200 -
+2026-04-04 20:50:06,288 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 20:50:06,334 [INFO]  * Restarting with stat
+2026-04-04 20:50:06,638 [WARNING]  * Debugger is active!
+2026-04-04 20:50:06,645 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:50:07,692 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 20:50:07,743 [INFO]  * Restarting with stat
+2026-04-04 20:50:07,955 [WARNING]  * Debugger is active!
+2026-04-04 20:50:07,959 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:50:59,066 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-04 20:50:59,066 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-04 20:50:59,066 [INFO]  * Restarting with stat
+2026-04-04 20:50:59,254 [WARNING]  * Debugger is active!
+2026-04-04 20:50:59,258 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 20:51:27,406 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:27] "GET / HTTP/1.1" 200 -
+2026-04-04 20:51:29,232 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:29] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:51:29,396 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:51:29,399 [INFO] 127.0.0.1 - - [04/Apr/2026 20:51:29] "GET /callback?code=6sN3CDpHhS2984byVLvHK5DJwOgJ5HZl-fhs9YzRgnM&state=7UwBGi_BAzNVM3AJuArH0IxW3TVAhALC HTTP/1.1" 200 -
+2026-04-04 20:54:38,295 [INFO] 127.0.0.1 - - [04/Apr/2026 20:54:38] "GET / HTTP/1.1" 200 -
+2026-04-04 20:54:39,233 [INFO] 127.0.0.1 - - [04/Apr/2026 20:54:39] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 20:54:39,378 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 20:54:39,379 [INFO] 127.0.0.1 - - [04/Apr/2026 20:54:39] "GET /callback?code=4tB9_DBf0gXCqR6QFHUx11RgNir5jEIVdobJxVLTl-c&state=rKW-y69VtL18bpGzojkaLj4VToQvEsH4 HTTP/1.1" 200 -
+2026-04-04 21:00:31,959 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 21:00:32,013 [INFO]  * Restarting with stat
+2026-04-04 21:00:32,226 [WARNING]  * Debugger is active!
+2026-04-04 21:00:32,230 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 21:00:33,278 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 21:00:33,330 [INFO]  * Restarting with stat
+2026-04-04 21:00:33,529 [WARNING]  * Debugger is active!
+2026-04-04 21:00:33,535 [INFO]  * Debugger PIN: 119-734-897
+2026-04-04 21:00:35,461 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-04 21:00:35,475 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:35] "GET /callback?code=4tB9_DBf0gXCqR6QFHUx11RgNir5jEIVdobJxVLTl-c&state=rKW-y69VtL18bpGzojkaLj4VToQvEsH4 HTTP/1.1" 200 -
+2026-04-04 21:00:36,177 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-04 21:00:36,180 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:36] "GET /callback?code=4tB9_DBf0gXCqR6QFHUx11RgNir5jEIVdobJxVLTl-c&state=rKW-y69VtL18bpGzojkaLj4VToQvEsH4 HTTP/1.1" 200 -
+2026-04-04 21:00:37,708 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:37] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:00:37,910 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:00:37,911 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:37] "GET /callback?code=zWVFBbnkaO-97UO0VqG-w4WUPEefO7-ai2TZqb225iw&state=qBKWHnTl8NOrWLnMWcbmXh5ZR3gNg0vG HTTP/1.1" 200 -
+2026-04-04 21:00:39,375 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:39] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:00:39,521 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:00:39,522 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:39] "GET /callback?code=vyFnRM4BTrgU6ZBOIqw7vkAyKFO1wG1nEuTmuXXEmsU&state=80MjyirbTGw5fAIIOWAnjGe1z8mdUO2O HTTP/1.1" 200 -
+2026-04-04 21:00:47,341 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:00:47,471 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:00:47,471 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:47] "GET /callback?code=74Q48D7foh7ammHLAp3JGOHEYAFYBfx2WzEgrNMA22A&state=TfUM6u2o1rXUYO9YNWy511DVwepBIi0k HTTP/1.1" 200 -
+2026-04-04 21:00:49,902 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:49] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:00:50,036 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:00:50,037 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:50] "GET /callback?code=vtRPD9AT_DOL7zn42wVX95nH3w2vrtcywPCy9nO8jnY&state=sj-eWKtYOER0iBRlNigduUN1-nVNwxX6 HTTP/1.1" 200 -
+2026-04-04 21:00:58,895 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:58] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:00:59,034 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:00:59,035 [INFO] 127.0.0.1 - - [04/Apr/2026 21:00:59] "GET /callback?code=Z8UKuFVcAHgO4gUxwUGbBEHF1hHKjDCl5bySa4TS-18&state=-tiUNq5blRFzrypsxEjRhlilzkdcupNp HTTP/1.1" 200 -
+2026-04-04 21:01:04,393 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:04] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:01:04,527 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:01:04,528 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:04] "GET /callback?code=gpkNWsKw0CrvtWVwhD2OeLXj-jv5viHz9ViYinu48GE&state=uiPF9W_J3zJz8b85fFaIG3AmBkg-YWYj HTTP/1.1" 200 -
+2026-04-04 21:01:05,675 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:05] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-04 21:01:05,822 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-04 21:01:05,822 [INFO] 127.0.0.1 - - [04/Apr/2026 21:01:05] "GET /callback?code=TD_XtidphKYMVNTgidmkQkwgVwpuKGOKQUSDGGpyzPM&state=UuIup0Bs7gbRZFatCpEWgR2FpJANSAJi HTTP/1.1" 200 -
+2026-04-04 21:02:15,492 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/utils/oidc_client.py', reloading
+2026-04-04 21:02:15,535 [INFO]  * Restarting with stat
+2026-04-04 21:02:15,818 [WARNING]  * Debugger is active!
+2026-04-04 21:02:15,822 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:24:07,682 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://127.0.0.1:5001
+2026-04-05 07:24:07,682 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 07:24:07,682 [INFO]  * Restarting with stat
+2026-04-05 07:24:07,878 [WARNING]  * Debugger is active!
+2026-04-05 07:24:07,884 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:24:11,392 [INFO] 127.0.0.1 - - [05/Apr/2026 07:24:11] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:25:09,704 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:25:09,710 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:09] "GET /callback?code=F8nAfMsfBWNZ9gI16u_qVQ9HmjL0F7rKb3Fv4Zb-0yk&state=qYN51bfnfFD4PWN_An4y9UPWWJgsWpj7 HTTP/1.1" 200 -
+2026-04-05 07:25:12,028 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:12] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:25:12,167 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:25:12,168 [INFO] 127.0.0.1 - - [05/Apr/2026 07:25:12] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:27:41,301 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-05 07:27:41,304 [INFO] 127.0.0.1 - - [05/Apr/2026 07:27:41] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:28:15,050 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-05 07:28:15,053 [INFO] 127.0.0.1 - - [05/Apr/2026 07:28:15] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:28:15,915 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-05 07:28:15,919 [INFO] 127.0.0.1 - - [05/Apr/2026 07:28:15] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:28:16,082 [WARNING] [STATE_MISSING] sub=None | Session lost between /login and /callback — cookie issue | ip=127.0.0.1
+2026-04-05 07:28:16,085 [INFO] 127.0.0.1 - - [05/Apr/2026 07:28:16] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:40:33,210 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/app.py', reloading
+2026-04-05 07:40:33,268 [INFO]  * Restarting with stat
+2026-04-05 07:40:33,567 [WARNING]  * Debugger is active!
+2026-04-05 07:40:33,572 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:40:54,153 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/routes/oauth_routes.py', reloading
+2026-04-05 07:40:54,199 [INFO]  * Restarting with stat
+2026-04-05 07:40:54,473 [WARNING]  * Debugger is active!
+2026-04-05 07:40:54,480 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:41:03,771 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/routes/oauth_routes.py', reloading
+2026-04-05 07:41:03,829 [INFO]  * Restarting with stat
+2026-04-05 07:41:04,023 [WARNING]  * Debugger is active!
+2026-04-05 07:41:04,026 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:41:07,114 [INFO]  * Detected change in '/Users/yoshithakandhasamy/Desktop/ZeroGuard/zeroguard_client/client/routes/chat_routes.py', reloading
+2026-04-05 07:41:07,168 [INFO]  * Restarting with stat
+2026-04-05 07:41:07,374 [WARNING]  * Debugger is active!
+2026-04-05 07:41:07,378 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:41:33,188 [CRITICAL] [STATE_MISMATCH] sub=None | state=7WKRZHTP... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:41:33,202 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:33] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:41:33,753 [CRITICAL] [STATE_MISMATCH] sub=None | state=7WKRZHTP... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:41:33,758 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:33] "GET /callback?code=-D3u3Cph3-o-JbKIU6kZYcfeZKuSOH_AF71n-ZcwoR0&state=7WKRZHTPN2vgV9LS9GrO5VMOL0Q_UvLK HTTP/1.1" 200 -
+2026-04-05 07:41:34,953 [CRITICAL] [STATE_MISMATCH] sub=None | state=qYN51bfn... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:41:34,957 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:34] "GET /callback?code=F8nAfMsfBWNZ9gI16u_qVQ9HmjL0F7rKb3Fv4Zb-0yk&state=qYN51bfnfFD4PWN_An4y9UPWWJgsWpj7 HTTP/1.1" 200 -
+2026-04-05 07:41:35,620 [CRITICAL] [STATE_MISMATCH] sub=None | state=qYN51bfn... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:41:35,622 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:35] "GET /callback?code=inqYptUwXkF3Hwr7PwWwcew2SlbxsCyMWpy0hWW1sqc&state=qYN51bfnfFD4PWN_An4y9UPWWJgsWpj7 HTTP/1.1" 200 -
+2026-04-05 07:41:36,244 [INFO] 127.0.0.1 - - [05/Apr/2026 07:41:36] "GET / HTTP/1.1" 200 -
+2026-04-05 07:42:28,517 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:28] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:42:28,713 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:42:28,714 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:28] "GET /callback?code=FHE8b7ndUTqlIk3zvmPeaxusFMc0akZHLi6BcEh8VK0&state=IQg75lOAWtN91piFQ4EVUbNaaQ8BqpAx HTTP/1.1" 200 -
+2026-04-05 07:42:31,676 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:31] "GET / HTTP/1.1" 200 -
+2026-04-05 07:42:31,935 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:31] "GET / HTTP/1.1" 200 -
+2026-04-05 07:42:32,098 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:32] "GET / HTTP/1.1" 200 -
+2026-04-05 07:42:33,456 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:33] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:42:33,594 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:42:33,595 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:33] "GET /callback?code=g8F5Sro0f3035KqQgvFCyWDLcdlwuRFngguAC6xWRsU&state=ohmFfwCMCFy7YO2TD7YppbUiboKVQhvj HTTP/1.1" 200 -
+2026-04-05 07:42:42,618 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:42] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:42:42,757 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:42:42,758 [INFO] 127.0.0.1 - - [05/Apr/2026 07:42:42] "GET /callback?code=nLUsUxktHtpvnNbMgsZgyiSERUbIP5DREGnibxRS0Ew&state=kimL0ef5gu-sHG7dQf650M_DUSSk9O2b HTTP/1.1" 200 -
+2026-04-05 07:49:21,994 [CRITICAL] [STATE_MISMATCH] sub=None | state=kimL0ef5... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:49:21,998 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:21] "GET /callback?code=nLUsUxktHtpvnNbMgsZgyiSERUbIP5DREGnibxRS0Ew&state=kimL0ef5gu-sHG7dQf650M_DUSSk9O2b HTTP/1.1" 200 -
+2026-04-05 07:49:22,757 [CRITICAL] [STATE_MISMATCH] sub=None | state=kimL0ef5... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 07:49:22,761 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:22] "GET /callback?code=nLUsUxktHtpvnNbMgsZgyiSERUbIP5DREGnibxRS0Ew&state=kimL0ef5gu-sHG7dQf650M_DUSSk9O2b HTTP/1.1" 200 -
+2026-04-05 07:49:24,940 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:24] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:49:25,085 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:49:25,085 [INFO] 127.0.0.1 - - [05/Apr/2026 07:49:25] "GET /callback?code=btVDAtFmew9KCg6ITcNhTWHJa-AfP7PXE9QnOadspcY&state=CzTMzvrPsP-_hXeM8_x_cOZTTprtyqD2 HTTP/1.1" 200 -
+2026-04-05 07:51:12,719 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 07:51:12,719 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 07:51:12,719 [INFO]  * Restarting with stat
+2026-04-05 07:51:12,906 [WARNING]  * Debugger is active!
+2026-04-05 07:51:12,910 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 07:52:10,092 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:10] "GET / HTTP/1.1" 200 -
+2026-04-05 07:52:52,620 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:52] "GET / HTTP/1.1" 200 -
+2026-04-05 07:52:55,055 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:55] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 07:52:55,214 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 07:52:55,217 [INFO] 127.0.0.1 - - [05/Apr/2026 07:52:55] "GET /callback?code=r-UIaPw-b4kMzg7OXGbGtN9oKgaqsrSuFJsfM8iLXJU&state=0lUFvDmirAOlBf8mVcO1t_GhgYEtOTnx HTTP/1.1" 200 -
+2026-04-05 08:03:27,859 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 08:03:27,859 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:03:27,860 [INFO]  * Restarting with stat
+2026-04-05 08:03:28,050 [WARNING]  * Debugger is active!
+2026-04-05 08:03:28,053 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:03:30,547 [CRITICAL] [STATE_MISMATCH] sub=None | state=0lUFvDmi... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:03:30,561 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:30] "GET /callback?code=r-UIaPw-b4kMzg7OXGbGtN9oKgaqsrSuFJsfM8iLXJU&state=0lUFvDmirAOlBf8mVcO1t_GhgYEtOTnx HTTP/1.1" 200 -
+2026-04-05 08:03:32,914 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:03:33,123 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:03:33,124 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:33] "GET /callback?code=6Sy2uaRHmjuIPyzSk9TXPatgcfCQXoxIfAuYWGJGanQ&state=ytUvZTzexZXQ7ty8N_XeoumUyb0NO2KF HTTP/1.1" 200 -
+2026-04-05 08:03:34,998 [CRITICAL] [STATE_MISMATCH] sub=None | state=ytUvZTze... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:03:35,001 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:35] "GET /callback?code=6Sy2uaRHmjuIPyzSk9TXPatgcfCQXoxIfAuYWGJGanQ&state=ytUvZTzexZXQ7ty8N_XeoumUyb0NO2KF HTTP/1.1" 200 -
+2026-04-05 08:03:36,944 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:36] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:03:37,085 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:03:37,085 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "GET /callback?code=1U87iGRVjo5n-fZCu4CWgXOa6IOnO0Wq0hoxrTOfMw4&state=Xx-WVO4Fuj4LgqaxDiJN1HQJMStNVBsH HTTP/1.1" 200 -
+2026-04-05 08:03:37,694 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:03:37,832 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:03:37,833 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:37] "GET /callback?code=tqTzMUOX-v-uUq-dbdCxecTKb_e2yYMhFo4FLDyRX0I&state=DzturO-XMtNWvzYLMohNaFDEfDHcHtek HTTP/1.1" 200 -
+2026-04-05 08:03:38,260 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:38] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:03:38,397 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:03:38,398 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:38] "GET /callback?code=KzA-pLdAEo3HbeYU8lzt9vWBwrnNt58U_sTRdI5x7Q4&state=Cobu026PbAtUHBhwAn9nGK5f87BTI_UX HTTP/1.1" 200 -
+2026-04-05 08:03:40,459 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:40] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:03:40,586 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:03:40,586 [INFO] 127.0.0.1 - - [05/Apr/2026 08:03:40] "GET /callback?code=bf8B3lCj-HDyDsVbyBw2IUpVMRN3DTy__RXGbzerbEQ&state=df0qqy0nYwmIjldi38gnde6FkXc3QbpZ HTTP/1.1" 200 -
+2026-04-05 08:05:06,002 [INFO] 127.0.0.1 - - [05/Apr/2026 08:05:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:05:19,303 [INFO] 127.0.0.1 - - [05/Apr/2026 08:05:19] "GET / HTTP/1.1" 200 -
+2026-04-05 08:05:19,319 [INFO] 127.0.0.1 - - [05/Apr/2026 08:05:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:06:24,824 [CRITICAL] [STATE_MISMATCH] sub=None | state=Cobu026P... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:06:24,827 [INFO] 127.0.0.1 - - [05/Apr/2026 08:06:24] "GET /callback?code=KzA-pLdAEo3HbeYU8lzt9vWBwrnNt58U_sTRdI5x7Q4&state=Cobu026PbAtUHBhwAn9nGK5f87BTI_UX HTTP/1.1" 200 -
+2026-04-05 08:06:25,010 [CRITICAL] [STATE_MISMATCH] sub=None | state=Cobu026P... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:06:25,014 [INFO] 127.0.0.1 - - [05/Apr/2026 08:06:25] "GET /callback?code=KzA-pLdAEo3HbeYU8lzt9vWBwrnNt58U_sTRdI5x7Q4&state=Cobu026PbAtUHBhwAn9nGK5f87BTI_UX HTTP/1.1" 200 -
+2026-04-05 08:06:34,306 [INFO] 127.0.0.1 - - [05/Apr/2026 08:06:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:08:52,188 [INFO] 127.0.0.1 - - [05/Apr/2026 08:08:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:09:23,794 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:09:23,936 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:09:23,937 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "GET /callback?code=sah8P7WeuDm4N4LJg-NpSylrYXHW-xJoV2lwNDSX7Ps&state=yiDFy6GMEXepfZFvolZpuFLAf2G61UkJ HTTP/1.1" 200 -
+2026-04-05 08:09:23,968 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:09:40,086 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:40] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:09:40,233 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:09:40,233 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:40] "GET /callback?code=Av5DBHLs1nujXSnwm07NUBVs8KzqL9OLoMz0xmhHU-0&state=mHdyP6Y8o26c-kTmCYWk6Bw2WWGSi1ky HTTP/1.1" 200 -
+2026-04-05 08:09:40,242 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:09:41,043 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:41] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:09:41,180 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:09:41,181 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:41] "GET /callback?code=z4zXVmDHFNEBbcXLctV3_vhK3lA-aTRpWWwOE1cRCv0&state=YBPx1FcL4go9kvMbV4FrtkMa1d-S__jH HTTP/1.1" 200 -
+2026-04-05 08:09:41,195 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:09:42,042 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:42] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:09:42,175 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:09:42,175 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:42] "GET /callback?code=L1Ar-X1_wI0HPeTZcPv5GlND2iZvEyacMzxRWmGAYcw&state=QeWizH5r8sJZReqZoeWogPpU8x2O4Bad HTTP/1.1" 200 -
+2026-04-05 08:09:42,188 [INFO] 127.0.0.1 - - [05/Apr/2026 08:09:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:21:47,874 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 08:21:47,874 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:21:47,874 [INFO]  * Restarting with stat
+2026-04-05 08:21:48,071 [WARNING]  * Debugger is active!
+2026-04-05 08:21:48,075 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:22:30,494 [INFO] 127.0.0.1 - - [05/Apr/2026 08:22:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-04-05 08:22:53,932 [INFO] 127.0.0.1 - - [05/Apr/2026 08:22:53] "GET / HTTP/1.1" 200 -
+2026-04-05 08:23:47,395 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:47] "GET / HTTP/1.1" 200 -
+2026-04-05 08:23:48,981 [INFO] 127.0.0.1 - - [05/Apr/2026 08:23:48] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:24:10,723 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:24:10,726 [INFO] 127.0.0.1 - - [05/Apr/2026 08:24:10] "GET /callback?code=SxWppcPxRJNh0EZ54Hm0r4bFXKNJI4GBzZJo58KfSyQ&state=Vtx53g4ra4YOkZ_SPUoKB12RrfQELeHS HTTP/1.1" 200 -
+2026-04-05 08:46:20,332 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 08:46:20,332 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:46:20,333 [INFO]  * Restarting with stat
+2026-04-05 08:46:20,526 [WARNING]  * Debugger is active!
+2026-04-05 08:46:20,532 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:51:35,359 [INFO] 127.0.0.1 - - [05/Apr/2026 08:51:35] "GET / HTTP/1.1" 200 -
+2026-04-05 08:51:36,688 [INFO] 127.0.0.1 - - [05/Apr/2026 08:51:36] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:52:12,307 [CRITICAL] [TOKEN_EXCHANGE_FAILED] sub=None | IDP token endpoint returned 401: {
+  "error": "invalid_client",
+  "error_description": "Client authentication failed"
+}
+ | ip=127.0.0.1
+2026-04-05 08:52:12,314 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:12] "GET /callback?code=8Ut7cY5OIBKca-UNr69qIAEogyzaWKHzdd5rODDgCrM&state=AucUPgiWjdFewcEdow5wIIORXTWcMpP8 HTTP/1.1" 200 -
+2026-04-05 08:52:47,353 [INFO] 127.0.0.1 - - [05/Apr/2026 08:52:47] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:53:11,147 [CRITICAL] [TOKEN_EXCHANGE_FAILED] sub=None | IDP token endpoint returned 401: {
+  "error": "invalid_client",
+  "error_description": "Client authentication failed"
+}
+ | ip=127.0.0.1
+2026-04-05 08:53:11,149 [INFO] 127.0.0.1 - - [05/Apr/2026 08:53:11] "GET /callback?code=D9P3LwX_5wmsCVSYaGFCGtJkc8SJjaV4rji8jRzSRLY&state=jOiDoiZk0jPerA33S1BpR8FtLVxaJYb- HTTP/1.1" 200 -
+2026-04-05 08:55:24,099 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 08:55:24,099 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 08:55:24,099 [INFO]  * Restarting with stat
+2026-04-05 08:55:24,288 [WARNING]  * Debugger is active!
+2026-04-05 08:55:24,292 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 08:55:29,836 [CRITICAL] [STATE_MISMATCH] sub=None | state=jOiDoiZk... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:55:29,848 [INFO] 127.0.0.1 - - [05/Apr/2026 08:55:29] "GET /callback?code=D9P3LwX_5wmsCVSYaGFCGtJkc8SJjaV4rji8jRzSRLY&state=jOiDoiZk0jPerA33S1BpR8FtLVxaJYb- HTTP/1.1" 200 -
+2026-04-05 08:55:30,519 [CRITICAL] [STATE_MISMATCH] sub=None | state=jOiDoiZk... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 08:55:30,523 [INFO] 127.0.0.1 - - [05/Apr/2026 08:55:30] "GET /callback?code=D9P3LwX_5wmsCVSYaGFCGtJkc8SJjaV4rji8jRzSRLY&state=jOiDoiZk0jPerA33S1BpR8FtLVxaJYb- HTTP/1.1" 200 -
+2026-04-05 08:56:32,052 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:32] "GET / HTTP/1.1" 200 -
+2026-04-05 08:56:32,967 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:32] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 08:56:48,232 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 08:56:48,233 [INFO] 127.0.0.1 - - [05/Apr/2026 08:56:48] "GET /callback?code=K_z8H4BevDRAq61ddPM_v-wLblLb5u4-HAy2WADq548&state=wBBlqP91nGibMY_ih4SOStUQaIXpOhLp HTTP/1.1" 200 -
+2026-04-05 11:38:18,841 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 11:38:18,841 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:38:18,842 [INFO]  * Restarting with stat
+2026-04-05 11:38:19,040 [WARNING]  * Debugger is active!
+2026-04-05 11:38:19,046 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 11:38:30,498 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:30] "GET / HTTP/1.1" 200 -
+2026-04-05 11:38:41,442 [INFO] 127.0.0.1 - - [05/Apr/2026 11:38:41] "GET / HTTP/1.1" 200 -
+2026-04-05 11:39:21,405 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:21] "GET / HTTP/1.1" 200 -
+2026-04-05 11:39:23,040 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:23] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 11:39:55,286 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 11:39:55,289 [INFO] 127.0.0.1 - - [05/Apr/2026 11:39:55] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:03,441 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:03,444 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:03] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:03,646 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:03,649 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:03] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:03,841 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:03,845 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:03] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:04,158 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:04,163 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:04] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:04,355 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:04,359 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:04] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:04,520 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:04,523 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:04] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:04,705 [CRITICAL] [STATE_MISMATCH] sub=None | state=c2tH6gJc... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:40:04,709 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:04] "GET /callback?code=p6uVnBubPD_bA0h3r-JKVYNnyPxNGgFwnxeiJDRxrmY&state=c2tH6gJcSDqrSRt9iVl85fV7BKNTLEBy HTTP/1.1" 200 -
+2026-04-05 11:40:12,057 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:12] "GET / HTTP/1.1" 200 -
+2026-04-05 11:40:12,524 [INFO] 127.0.0.1 - - [05/Apr/2026 11:40:12] "GET / HTTP/1.1" 200 -
+2026-04-05 11:46:59,432 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 11:46:59,432 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:46:59,432 [INFO]  * Restarting with stat
+2026-04-05 11:46:59,630 [WARNING]  * Debugger is active!
+2026-04-05 11:46:59,637 [INFO]  * Debugger PIN: 119-734-897
+2026-04-05 11:47:40,980 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:40] "GET / HTTP/1.1" 200 -
+2026-04-05 11:47:42,111 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:42] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 11:47:59,491 [CRITICAL] [TOKEN_EXCHANGE_FAILED] sub=None | IDP token endpoint returned 401: {
+  "error": "invalid_client",
+  "error_description": "Client authentication failed"
+}
+ | ip=127.0.0.1
+2026-04-05 11:47:59,495 [INFO] 127.0.0.1 - - [05/Apr/2026 11:47:59] "GET /callback?code=o-INu99D3P0oPw-gs7xA1jx0ZS434jNCE7-MhYBRiQY&state=cUUmcWrD7jSG9Q-jRqVMwSotUK66lOyj HTTP/1.1" 200 -
+2026-04-05 11:48:02,275 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:02] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 11:48:18,904 [CRITICAL] [TOKEN_EXCHANGE_FAILED] sub=None | IDP token endpoint returned 401: {
+  "error": "invalid_client",
+  "error_description": "Client authentication failed"
+}
+ | ip=127.0.0.1
+2026-04-05 11:48:18,906 [INFO] 127.0.0.1 - - [05/Apr/2026 11:48:18] "GET /callback?code=cBRNXvWb7Ad7GKPaOUwYBzT1hGRHSddNs_JP5saqCLg&state=niSMAnr41E6jNftNWW-RwZ7Suj-RmULO HTTP/1.1" 200 -
+2026-04-05 11:50:14,925 [CRITICAL] [STATE_MISMATCH] sub=None | state=niSMAnr4... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:50:14,928 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:14] "GET /callback?code=cBRNXvWb7Ad7GKPaOUwYBzT1hGRHSddNs_JP5saqCLg&state=niSMAnr41E6jNftNWW-RwZ7Suj-RmULO HTTP/1.1" 200 -
+2026-04-05 11:50:15,838 [CRITICAL] [STATE_MISMATCH] sub=None | state=niSMAnr4... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 11:50:15,842 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:15] "GET /callback?code=cBRNXvWb7Ad7GKPaOUwYBzT1hGRHSddNs_JP5saqCLg&state=niSMAnr41E6jNftNWW-RwZ7Suj-RmULO HTTP/1.1" 200 -
+2026-04-05 11:50:45,807 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:45] "GET / HTTP/1.1" 200 -
+2026-04-05 11:50:46,840 [INFO] 127.0.0.1 - - [05/Apr/2026 11:50:46] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 11:51:04,262 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 11:51:04,263 [INFO] 127.0.0.1 - - [05/Apr/2026 11:51:04] "GET /callback?code=Pnm2fyigNEFdIOULD2HHt69Ga6IFIhNEc4S_1Bxbukg&state=PYhXoDepz2jqnQe1B2lyOq3efqBnO3VB HTTP/1.1" 200 -
+2026-04-05 11:53:48,101 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 11:53:48,101 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:54:22,232 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 11:54:22,232 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 11:55:00,810 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:00] "GET / HTTP/1.1" 200 -
+2026-04-05 11:55:02,223 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:02] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 11:55:17,208 [CRITICAL] [ID_TOKEN_INVALID] sub=None | Signature has expired | ip=127.0.0.1
+2026-04-05 11:55:17,210 [INFO] 127.0.0.1 - - [05/Apr/2026 11:55:17] "GET /callback?code=dwg67eiSMQ9TOGKm2C8SxJxMQNGV6Eee7keoFK1twRw&state=ZXzOSip055J-6LJjIf_NZzjyIKFR2wUh HTTP/1.1" 200 -
+2026-04-05 12:00:05,547 [CRITICAL] [STATE_MISMATCH] sub=None | state=jVSFQvy2... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 12:00:05,555 [INFO] 127.0.0.1 - - [05/Apr/2026 12:00:05] "GET /callback?code=-Qh9pbi4aim6-kt4-vg97CsYAPwOXXDDXyBY7Lqojl0&state=jVSFQvy2KNkoZCXmw6OF8g HTTP/1.1" 200 -
+2026-04-05 16:43:22,121 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.3:5001
+2026-04-05 16:43:22,121 [INFO] [33mPress CTRL+C to quit[0m
+2026-04-05 16:45:12,704 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:12] "GET / HTTP/1.1" 200 -
+2026-04-05 16:45:14,254 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:14] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 16:45:34,422 [INFO] [LOGIN_SUCCESS] sub=2 | email=abc1@abc.com role=user | ip=127.0.0.1
+2026-04-05 16:45:34,425 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "[32mGET /callback?code=HBOeAajYw7CLX8C-rxb4LmC-9gTzUiY5MW5cCzNERbs&state=8vwgaXY-sW3Y9fD1QFJoAFgBaaDFMwDu HTTP/1.1[0m" 302 -
+2026-04-05 16:45:34,432 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "GET /chat HTTP/1.1" 200 -
+2026-04-05 16:45:34,469 [INFO] 127.0.0.1 - - [05/Apr/2026 16:45:34] "GET /api/chat/history?per_page=20 HTTP/1.1" 200 -
+2026-04-05 16:46:01,918 [INFO] [CHAT_PROMPT] sub=2 | threat=normal len=18 | ip=127.0.0.1
+2026-04-05 16:46:03,445 [INFO] 127.0.0.1 - - [05/Apr/2026 16:46:03] "POST /api/chat/send HTTP/1.1" 200 -
+2026-04-05 16:46:03,462 [INFO] 127.0.0.1 - - [05/Apr/2026 16:46:03] "GET /api/chat/history?per_page=20 HTTP/1.1" 200 -
+2026-04-05 16:46:34,233 [INFO] [CHAT_PROMPT] sub=2 | threat=normal len=9 | ip=127.0.0.1
+2026-04-05 16:46:35,899 [INFO] 127.0.0.1 - - [05/Apr/2026 16:46:35] "POST /api/chat/send HTTP/1.1" 200 -
+2026-04-05 16:46:35,914 [INFO] 127.0.0.1 - - [05/Apr/2026 16:46:35] "GET /api/chat/history?per_page=20 HTTP/1.1" 200 -
+2026-04-05 17:15:12,438 [INFO] 127.0.0.1 - - [05/Apr/2026 17:15:12] "GET / HTTP/1.1" 200 -
+2026-04-05 17:15:43,029 [INFO] 127.0.0.1 - - [05/Apr/2026 17:15:43] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 17:16:13,156 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:13] "[32mGET /chat HTTP/1.1[0m" 302 -
+2026-04-05 17:16:35,898 [CRITICAL] [STATE_MISMATCH] sub=None | state=8vwgaXY-... not found in store (expired or reused) | ip=127.0.0.1
+2026-04-05 17:16:35,906 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:35] "GET /callback?code=s7e5e31vK0YiH_ZnxxcH2M5AjZSaFMTHZe4EPnAcGfI&state=8vwgaXY-sW3Y9fD1QFJoAFgBaaDFMwDu HTTP/1.1" 200 -
+2026-04-05 17:16:50,476 [INFO] 127.0.0.1 - - [05/Apr/2026 17:16:50] "[32mGET /login HTTP/1.1[0m" 302 -
+2026-04-05 17:17:08,150 [INFO] [LOGIN_SUCCESS] sub=2 | email=abc1@abc.com role=user | ip=127.0.0.1
+2026-04-05 17:17:08,151 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:08] "[32mGET /callback?code=YUoCthXHQV8agWyyRuMwvt8t2fdQ00lkkrMC2i-b2aY&state=B6N5C8zFonoTAMbu41UYnjXsH3kisuU- HTTP/1.1[0m" 302 -
+2026-04-05 17:17:08,154 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:08] "GET /chat HTTP/1.1" 200 -
+2026-04-05 17:17:08,183 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:08] "GET /api/chat/history?per_page=20 HTTP/1.1" 200 -
+2026-04-05 17:17:38,289 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:38] "GET / HTTP/1.1" 200 -
+2026-04-05 17:17:39,506 [INFO] 127.0.0.1 - - [05/Apr/2026 17:17:39] "GET / HTTP/1.1" 200 -

@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from flask_cors import CORS
 from dotenv import load_dotenv
 from idp.extensions import db, limiter
@@ -33,6 +33,13 @@ def create_app():
     app.register_blueprint(discovery_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(auth_bp)
+
+    # FIX: Register root route directly on the app so localhost:5008/ works.
+    # The auth_bp has url_prefix='/auth', so its routes are /auth/...
+    # Without this, visiting localhost:5008/ gives 404.
+    @app.route('/')
+    def idp_home():
+        return render_template('idp_home.html')
 
     with app.app_context():
         db.create_all()

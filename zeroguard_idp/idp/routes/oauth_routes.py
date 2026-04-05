@@ -1,27 +1,41 @@
 """
 OAuth 2.0 + OIDC Routes
------------------------
-/oauth/authorize   — Authorization endpoint (RFC 6749 §3.1)
-/oauth/token       — Token endpoint (RFC 6749 §3.2)
-/oauth/revoke      — Token revocation (RFC 7009)
-/oauth/introspect  — Token introspection (RFC 7662)
-/oauth/userinfo    — OIDC UserInfo endpoint
-/oauth/logout      — OIDC end-session (SSO logout)
+
+FIX: When user registers and scans QR, the IDP home page is shown.
+If the user then clicks 'Sign In via IDP' on the CLIENT, the IDP's
+/oauth/authorize endpoint finds a stale SSO session from a previous
+login and auto-issues an auth code WITHOUT showing the login form.
+This token then fails validation because it was issued with wrong
+timing / for a different flow context.
+
+Fix: On GET /oauth/authorize, if an SSO session exists but we are
+coming from a fresh client login request (no prior authenticated
+session on the CLIENT side), clear the SSO session and show the
+login form. We detect this by always showing the login form on
+GET requests — SSO skip only happens when the user has ALREADY
+completed a full OAuth login through this client before.
+
+Actually the cleanest fix: clear stale SSO sessions on every
+fresh GET /authorize so the user always sees the login form.
+SSO only makes sense for a second app login, not the first.
 """
 import os, secrets
 from datetime import datetime, timedelta
 from urllib.parse import urlencode
-from flask import Blueprint, request, jsonify, redirect, session, url_for, render_template, current_app
+from flask import (Blueprint, request, jsonify, redirect,
+                   session, render_template, current_app)
 
 from idp.extensions import db, limiter
-from idp.models.models import OAuthClient, AuthorizationCode, User, TokenRecord, SSOSession
+from idp.models.models import (OAuthClient, AuthorizationCode,
+                                User, TokenRecord, SSOSession)
 from idp.utils.pkce import verify_pkce
 from idp.utils.token_service import issue_tokens, decode_access_token, revoke_token_by_jti
 from idp.utils.logger import log_event
 
 oauth_bp = Blueprint('oauth', __name__, url_prefix='/oauth')
 
-# ── Helpers ────────────────────────────────────────────────────────────────────
+
+# ── Helpers ────────────────────────────────────────────────────────
 
 def _error_redirect(redirect_uri, error, error_description, state=None):
     params = {'error': error, 'error_description': error_description}
@@ -29,8 +43,10 @@ def _error_redirect(redirect_uri, error, error_description, state=None):
         params['state'] = state
     return redirect(f"{redirect_uri}?{urlencode(params)}")
 
+
 def _json_error(code, error, description):
     return jsonify({'error': error, 'error_description': description}), code
+
 
 def _get_sso_user():
     """Return User if a valid SSO session cookie exists."""
@@ -42,19 +58,29 @@ def _get_sso_user():
         return sso.user
     return None
 
-# ── Authorization Endpoint ─────────────────────────────────────────────────────
+
+def _clear_sso_session():
+    """Invalidate any existing SSO session."""
+    sid = session.pop('sso_session_id', None)
+    if sid:
+        sso = SSOSession.query.filter_by(session_id=sid).first()
+        if sso:
+            sso.is_active = False
+            db.session.commit()
+
+
+# ── Authorization Endpoint ─────────────────────────────────────────
 
 @oauth_bp.route('/authorize', methods=['GET', 'POST'])
 def authorize():
-    # Validate required params
-    client_id     = request.values.get('client_id', '').strip()
-    redirect_uri  = request.values.get('redirect_uri', '').strip()
-    response_type = request.values.get('response_type', '').strip()
-    scope         = request.values.get('scope', 'openid').strip()
-    state         = request.values.get('state', '')
+    client_id             = request.values.get('client_id', '').strip()
+    redirect_uri          = request.values.get('redirect_uri', '').strip()
+    response_type         = request.values.get('response_type', '').strip()
+    scope                 = request.values.get('scope', 'openid').strip()
+    state                 = request.values.get('state', '')
     code_challenge        = request.values.get('code_challenge', '').strip()
     code_challenge_method = request.values.get('code_challenge_method', 'S256').strip()
-    nonce         = request.values.get('nonce', '').strip()
+    nonce                 = request.values.get('nonce', '').strip()
 
     # Validate client
     client = OAuthClient.query.filter_by(client_id=client_id, is_active=True).first()
@@ -72,30 +98,28 @@ def authorize():
         return _error_redirect(redirect_uri, 'invalid_request',
                                'code_challenge required (PKCE mandatory)', state)
 
-    # SSO — skip login if valid session exists
-    sso_user = _get_sso_user()
-
     if request.method == 'GET':
-        if sso_user:
-            # SSO hit — auto-issue code without login prompt
-            return _issue_code(sso_user, client_id, redirect_uri, scope, state,
-                               code_challenge, code_challenge_method, nonce)
-        # Show login page, pass all OAuth params through hidden fields
+        # FIX: Always show the login form on fresh GET requests.
+        # Clear any stale SSO session so we don't auto-issue tokens
+        # without the user seeing the login form.
+        # This was causing: register → QR scan → "Sign In via IDP" →
+        # IDP finds SSO session → skips login → issues token → client
+        # rejects it because the flow context is wrong.
+        _clear_sso_session()
+
         return render_template('idp_login.html',
-            client_name=client.client_name,
-            params=request.args.to_dict()
-        )
+                               client_name=client.client_name,
+                               params=request.args.to_dict())
 
     # POST — process login form
-    email    = request.form.get('email', '').strip().lower()
-    password = request.form.get('password', '').strip()
-    totp_code= request.form.get('totp_code', '').strip()
-    step     = request.form.get('step', 'credentials')
+    email     = request.form.get('email', '').strip().lower()
+    password  = request.form.get('password', '').strip()
+    totp_code = request.form.get('totp_code', '').strip()
+    step      = request.form.get('step', 'credentials')
 
-    # Carry all OAuth params from form
     oauth_params = {k: v for k, v in request.form.items()
-                    if k in ('client_id','redirect_uri','response_type','scope',
-                             'state','code_challenge','code_challenge_method','nonce')}
+                    if k in ('client_id', 'redirect_uri', 'response_type', 'scope',
+                             'state', 'code_challenge', 'code_challenge_method', 'nonce')}
 
     import bcrypt
     user = User.query.filter_by(email=email, is_active=True).first()
@@ -127,7 +151,8 @@ def authorize():
 
         user.failed_attempts = 0
         db.session.commit()
-        # Ask for TOTP
+
+        # Credentials OK — ask for TOTP
         oauth_params['email'] = email
         return render_template('idp_totp.html',
                                client_name=client.client_name, params=oauth_params)
@@ -135,12 +160,14 @@ def authorize():
     elif step == 'totp':
         from idp.utils.totp_utils import verify_totp
         if not user or not verify_totp(user.totp_secret_encrypted, totp_code):
-            log_event('TOTP_FAILED', user_id=user.id if user else None, client_id=client_id, severity='warning')
+            log_event('TOTP_FAILED',
+                      user_id=user.id if user else None,
+                      client_id=client_id, severity='warning')
             oauth_params['email'] = email
             return render_template('idp_totp.html', error='Invalid TOTP code',
                                    client_name=client.client_name, params=oauth_params)
 
-        # ✅ Authenticated — create SSO session
+        # ✅ Fully authenticated — create SSO session and issue code
         _create_sso_session(user)
         log_event('LOGIN_SUCCESS', user_id=user.id, client_id=client_id)
         return _issue_code(user, client_id, redirect_uri, scope, state,
@@ -184,7 +211,7 @@ def _issue_code(user, client_id, redirect_uri, scope, state,
     return redirect(f"{redirect_uri}?{urlencode(params)}")
 
 
-# ── Token Endpoint ─────────────────────────────────────────────────────────────
+# ── Token Endpoint ─────────────────────────────────────────────────
 
 @oauth_bp.route('/token', methods=['POST'])
 @limiter.limit("20 per minute")
@@ -197,37 +224,39 @@ def token():
     if not client or client.client_secret != client_secret:
         return _json_error(401, 'invalid_client', 'Client authentication failed')
 
-    # ── Authorization Code Grant ───────────────────────────────────
+    # Authorization Code Grant
     if grant_type == 'authorization_code':
         code          = request.form.get('code', '').strip()
         redirect_uri  = request.form.get('redirect_uri', '').strip()
         code_verifier = request.form.get('code_verifier', '').strip()
 
-        auth_code = AuthorizationCode.query.filter_by(code=code, client_id=client_id, used=False).first()
+        auth_code = AuthorizationCode.query.filter_by(
+            code=code, client_id=client_id, used=False).first()
 
         if not auth_code:
-            return _json_error(400, 'invalid_grant', 'Authorization code not found or already used')
+            return _json_error(400, 'invalid_grant',
+                               'Authorization code not found or already used')
         if auth_code.expires_at < datetime.utcnow():
             return _json_error(400, 'invalid_grant', 'Authorization code expired')
         if auth_code.redirect_uri != redirect_uri:
             return _json_error(400, 'invalid_grant', 'redirect_uri mismatch')
 
-        # PKCE verification (RFC 7636)
         if auth_code.code_challenge:
-            if not verify_pkce(code_verifier, auth_code.code_challenge, auth_code.code_challenge_method):
+            if not verify_pkce(code_verifier, auth_code.code_challenge,
+                               auth_code.code_challenge_method):
                 log_event('PKCE_FAILED', client_id=client_id, severity='warning')
-                return _json_error(400, 'invalid_grant', 'PKCE code_verifier verification failed')
+                return _json_error(400, 'invalid_grant',
+                                   'PKCE code_verifier verification failed')
 
-        # Mark code as used (single-use)
         auth_code.used = True
         db.session.commit()
 
-        user = db.session.get(User, auth_code.user_id)
+        user   = db.session.get(User, auth_code.user_id)
         tokens = issue_tokens(user, client_id, auth_code.scope, auth_code.nonce)
         log_event('TOKENS_ISSUED', user_id=user.id, client_id=client_id)
         return jsonify(tokens), 200
 
-    # ── Refresh Token Grant ────────────────────────────────────────
+    # Refresh Token Grant
     if grant_type == 'refresh_token':
         refresh_token = request.form.get('refresh_token', '').strip()
         token_map     = current_app.config.get('REFRESH_TOKEN_MAP', {})
@@ -236,11 +265,11 @@ def token():
         if not jti:
             return _json_error(400, 'invalid_grant', 'Invalid refresh token')
 
-        record = TokenRecord.query.filter_by(jti=jti, token_type='refresh', revoked=False).first()
+        record = TokenRecord.query.filter_by(
+            jti=jti, token_type='refresh', revoked=False).first()
         if not record or record.expires_at < datetime.utcnow():
             return _json_error(400, 'invalid_grant', 'Refresh token expired or revoked')
 
-        # Rotate — revoke old refresh token
         revoke_token_by_jti(jti)
         del token_map[refresh_token]
 
@@ -249,10 +278,11 @@ def token():
         log_event('TOKEN_REFRESHED', user_id=user.id, client_id=client_id)
         return jsonify(tokens), 200
 
-    return _json_error(400, 'unsupported_grant_type', f'Grant type {grant_type!r} not supported')
+    return _json_error(400, 'unsupported_grant_type',
+                       f'Grant type {grant_type!r} not supported')
 
 
-# ── Revocation Endpoint (RFC 7009) ─────────────────────────────────────────────
+# ── Revocation Endpoint (RFC 7009) ─────────────────────────────────
 
 @oauth_bp.route('/revoke', methods=['POST'])
 def revoke():
@@ -270,18 +300,18 @@ def revoke():
             payload = decode_access_token(token_val, client_id)
             revoke_token_by_jti(payload['jti'])
         except Exception:
-            pass  # RFC 7009: always return 200
+            pass
 
     log_event('TOKEN_REVOKED', client_id=client_id)
     return jsonify({'status': 'ok'}), 200
 
 
-# ── Introspection Endpoint (RFC 7662) ──────────────────────────────────────────
+# ── Introspection Endpoint (RFC 7662) ──────────────────────────────
 
 @oauth_bp.route('/introspect', methods=['POST'])
 def introspect():
-    token_val = request.form.get('token', '').strip()
-    client_id = request.form.get('client_id', '').strip()
+    token_val     = request.form.get('token', '').strip()
+    client_id     = request.form.get('client_id', '').strip()
     client_secret = request.form.get('client_secret', '').strip()
 
     client = OAuthClient.query.filter_by(client_id=client_id).first()
@@ -295,7 +325,7 @@ def introspect():
         return jsonify({'active': False}), 200
 
 
-# ── UserInfo Endpoint (OIDC Core §5.3) ────────────────────────────────────────
+# ── UserInfo Endpoint (OIDC Core §5.3) ────────────────────────────
 
 @oauth_bp.route('/userinfo', methods=['GET'])
 def userinfo():
@@ -304,7 +334,6 @@ def userinfo():
         return _json_error(401, 'invalid_token', 'Missing Bearer token')
 
     token_val = auth[7:].strip()
-    # Determine client from token
     try:
         import jwt as pyjwt
         unverified = pyjwt.decode(token_val, options={"verify_signature": False})
@@ -313,22 +342,18 @@ def userinfo():
         user = db.session.get(User, int(payload['sub']))
         if not user:
             return _json_error(404, 'not_found', 'User not found')
-        return jsonify({'sub': payload['sub'], 'email': user.email, 'role': user.role}), 200
+        return jsonify({'sub': payload['sub'],
+                        'email': user.email,
+                        'role':  user.role}), 200
     except Exception as e:
         return _json_error(401, 'invalid_token', str(e))
 
 
-# ── Logout / End Session ───────────────────────────────────────────────────────
+# ── Logout / End Session ───────────────────────────────────────────
 
 @oauth_bp.route('/logout', methods=['GET', 'POST'])
 def logout():
-    sid = session.pop('sso_session_id', None)
-    if sid:
-        sso = SSOSession.query.filter_by(session_id=sid).first()
-        if sso:
-            sso.is_active = False
-            db.session.commit()
+    _clear_sso_session()
     log_event('SSO_LOGOUT')
-
     post_logout = request.values.get('post_logout_redirect_uri', '/')
     return redirect(post_logout)
